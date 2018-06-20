@@ -17,7 +17,7 @@
 
 
 <meta name="author" content="Bing" />
-  <meta name="description" content="安装工具 go，支持go语言编译（MAC下使用brew安装） sh brew install go delv，支持go语言调试 sh brew install delv goland，jetBrains家族的g" />
+  <meta name="description" content="安装工具 go，支持go语言编译（MAC下使用brew安装） brew install go delv，支持go语言调试 brew install delv goland，jetBrains家族的go IDE" />
 
   <meta name="keywords" content="Bing, Ethereum, 以太坊" />
 
@@ -50,7 +50,7 @@
 
 
 <meta property="og:title" content="以太坊开发环境搭建" />
-<meta property="og:description" content="安装工具 go，支持go语言编译（MAC下使用brew安装） sh brew install go delv，支持go语言调试 sh brew install delv goland，jetBrains家族的g" />
+<meta property="og:description" content="安装工具 go，支持go语言编译（MAC下使用brew安装） brew install go delv，支持go语言调试 brew install delv goland，jetBrains家族的go IDE" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" />
 
@@ -71,19 +71,19 @@
 
 
 <meta itemprop="name" content="以太坊开发环境搭建">
-<meta itemprop="description" content="安装工具 go，支持go语言编译（MAC下使用brew安装） sh brew install go delv，支持go语言调试 sh brew install delv goland，jetBrains家族的g">
+<meta itemprop="description" content="安装工具 go，支持go语言编译（MAC下使用brew安装） brew install go delv，支持go语言调试 brew install delv goland，jetBrains家族的go IDE">
 
 
 <meta itemprop="datePublished" content="2018-06-20T18:34:35&#43;08:00" />
 <meta itemprop="dateModified" content="2018-06-20T18:34:35&#43;08:00" />
-<meta itemprop="wordCount" content="322">
+<meta itemprop="wordCount" content="319">
 
 
 
 <meta itemprop="keywords" content="以太坊," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="以太坊开发环境搭建"/>
-<meta name="twitter:description" content="安装工具 go，支持go语言编译（MAC下使用brew安装） sh brew install go delv，支持go语言调试 sh brew install delv goland，jetBrains家族的g"/>
+<meta name="twitter:description" content="安装工具 go，支持go语言编译（MAC下使用brew安装） brew install go delv，支持go语言调试 brew install delv goland，jetBrains家族的go IDE"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -165,14 +165,20 @@
 <h4 id="安装工具">安装工具</h4>
 
 <ul>
-<li>go，支持go语言编译（MAC下使用brew安装）
-<code>sh
-brew install go
-</code></li>
-<li>delv，支持go语言调试
-<code>sh
-brew install delv
-</code></li>
+<li>go，支持go语言编译（MAC下使用brew安装）</li>
+</ul>
+
+<pre><code class="language-sh">brew install go
+</code></pre>
+
+<ul>
+<li>delv，支持go语言调试</li>
+</ul>
+
+<pre><code class="language-sh">brew install delv
+</code></pre>
+
+<ul>
 <li>goland，jetBrains家族的go IDE
 <a href="https://www.jetbrains.com/go/">https://www.jetbrains.com/go/</a></li>
 </ul>
@@ -180,11 +186,15 @@ brew install delv
 <h4 id="准备源码">准备源码</h4>
 
 <ul>
-<li>下载go ethereum 源码，至~/go/src/github.com/ethereum/go-ethereum（MAC下GOPATH为~/go）
-<a href="https://github.com/ethereum/go-ethereum">https://github.com/ethereum/go-ethereum</a>
-<code>git
-git clone https://github.com/ethereum/go-ethereum.git
-</code></li>
+<li>下载go ethereum 源码，至~/go/src/github.com/ethereum/go-ethereum（MAC下GOPATH为~/go）</li>
+</ul>
+
+<p><a href="https://github.com/ethereum/go-ethereum">https://github.com/ethereum/go-ethereum</a></p>
+
+<pre><code class="language-sh">git clone https://github.com/ethereum/go-ethereum.git
+</code></pre>
+
+<ul>
 <li>打开GoLand，加载go-ethereum为工作空间</li>
 <li>go get 相关依赖包，比如github.com/syndtr/goleveldb/leveldb。如果缺少依赖，相关依赖包import会标红</li>
 
@@ -192,15 +202,16 @@ git clone https://github.com/ethereum/go-ethereum.git
 
 <h4 id="编译调试">编译调试</h4></li>
 
-<li><p>Edit Configurations 添加 Go Build</p>
+<li><p>Edit Configurations 添加 Go Build</p></li>
+</ul>
 
 <pre><code class="language-yaml">Run Kind: Directory
 Directory: ${HOME}/go/src/github.com/ethereum/go-ethereum/cmd/geth
-</code></pre></li>
+</code></pre>
 
-<li><p>配置完之后进入debug</p></li>
-
-<li><p>编译的二进制文件在 ~/go/src/github.com/ethereum/go-ethereum/build/bin 目录下</p></li>
+<ul>
+<li>配置完之后进入debug</li>
+<li>编译的二进制文件在 ~/go/src/github.com/ethereum/go-ethereum/build/bin 目录下</li>
 </ul>
 
     </div>

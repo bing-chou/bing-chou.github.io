@@ -17,7 +17,7 @@
       <pubDate>Wed, 20 Jun 2018 18:34:35 +0800</pubDate>
       
       <guid>http://localhost:1313/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</guid>
-      <description>安装工具 go，支持go语言编译（MAC下使用brew安装） sh brew install go delv，支持go语言调试 sh brew install delv goland，jetBrains家族的g</description>
+      <description>安装工具 go，支持go语言编译（MAC下使用brew安装） brew install go delv，支持go语言调试 brew install delv goland，jetBrains家族的go IDE</description>
     </item>
     
   </channel>
