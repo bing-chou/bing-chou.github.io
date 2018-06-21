@@ -76,7 +76,7 @@
 
 <meta itemprop="datePublished" content="2018-06-21T14:53:21&#43;08:00" />
 <meta itemprop="dateModified" content="2018-06-21T14:53:21&#43;08:00" />
-<meta itemprop="wordCount" content="604">
+<meta itemprop="wordCount" content="675">
 
 
 
@@ -176,7 +176,7 @@
 <li>使用geth创建一个账户，输入密码，获得账户地址${ADDR}</li>
 </ul>
 
-<pre><code class="language-sh">./geth account new 
+<pre><code class="language-sh">./geth --datadir data account new 
 </code></pre>
 
 <ul>
@@ -190,13 +190,13 @@
         &quot;eip155Block&quot;: 0,
         &quot;eip158Block&quot;: 0
     },
-    &quot;difficulty&quot;: &quot;400&quot;,
-    &quot;gasLimit&quot;: &quot;2100000&quot;,
+    &quot;difficulty&quot;: &quot;40000&quot;,
+    &quot;gasLimit&quot;: &quot;210000000&quot;,
     &quot;alloc&quot;: {
         &quot;${ADDR}&quot;:{
             &quot;balance&quot;: &quot;100000000000000000000000&quot;
         }
-    }
+    }。这里210000000，在官方建议的基础上多加了2个0
 }
 </code></pre>
 
@@ -205,8 +205,8 @@
 
 <ul>
 <li>chainId: 链id，以太坊主网id为1，测试网id为3，Rinkeby网为4。这里我们选个大于10的随机数就行</li>
-<li>difficulty: 难度系数，这里设得很小，400，方便调试</li>
-<li>gasLimit: block消耗gas上限，不能太小，不然合约交易无法成功</li>
+<li>difficulty: 难度系数，这里设得很小，40000，这样交易确认会比较快，方便调试</li>
+<li>gasLimit: block消耗gas上限，不能太小，不然合约交易无法成功。这里210000000，在官方建议的基础上多加了2个0</li>
 
 <li><p>alloc 为特定账户分配balance，${ADDR}替换为上一步中获得的实际账户地址</p>
 
@@ -270,6 +270,11 @@ eth.getTransaction(${TxHash}) //获得对应交易的信息
       
       <nav class="post-nav">
         
+          <a class="prev" href="/post/ethereum/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E9%83%A8%E7%BD%B2/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">智能合约部署</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
         
           <a class="next" href="/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
             <span class="next-text nav-default">以太坊开发环境搭建</span>

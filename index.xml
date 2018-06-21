@@ -6,10 +6,19 @@
     <description>Recent content on Bing - Never stop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 21 Jun 2018 14:53:21 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 21 Jun 2018 17:21:24 +0800</lastBuildDate>
     
 	<atom:link href="https://bing-chou.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>智能合约部署</title>
+      <link>https://bing-chou.github.io/post/ethereum/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Thu, 21 Jun 2018 17:21:24 +0800</pubDate>
+      
+      <guid>https://bing-chou.github.io/post/ethereum/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E9%83%A8%E7%BD%B2/</guid>
+      <description>参考 区块链项目开发指南 京东链接 Your first Ethereum smart contract Building-Blockchain-Projects 准备工作 合约代码 该合约演示了文件所有权账本，记录了文件及文件拥有者对应关系，文件唯一性由其hash</description>
+    </item>
     
     <item>
       <title>以太坊私有链搭建及基本操作</title>
