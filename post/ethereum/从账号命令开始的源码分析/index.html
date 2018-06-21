@@ -76,7 +76,7 @@
 
 <meta itemprop="datePublished" content="2018-06-21T20:31:27&#43;08:00" />
 <meta itemprop="dateModified" content="2018-06-21T20:31:27&#43;08:00" />
-<meta itemprop="wordCount" content="999">
+<meta itemprop="wordCount" content="1115">
 
 
 
@@ -215,6 +215,8 @@
 <li>几个概念：公钥pubKey，私钥privKey，密码pass，签名sign，任意内容content</li>
 <li>每笔交易发起会去校验由私钥+密码是否能够得到账号地址：privKey+pass -&gt; address，由此需要密码和私钥才能发起交易</li>
 <li>交易被确认前校验由公钥+内容能否解析出私钥+内容加密得到的签名：pubKey + content -&gt; sign=[privKey+content]</li>
+<li>密码+keyStore对象获得私钥：pass+keyObject-&gt;privKey，所以务必确保自己保存好keystore和密码，丢失其中一个都不能发起交易。这点和比特币可能不太一样</li>
+<li>以太坊使用椭圆曲线算法，具体逻辑暂时不做理解</li>
 </ul></li>
 </ul>
 
