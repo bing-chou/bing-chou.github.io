@@ -17,9 +17,9 @@
 
 
 <meta name="author" content="Bing" />
-  <meta name="description" content="安装工具 go，支持go语言编译（MAC下使用brew安装） brew install go delv，支持go语言调试 brew install delv goland，jetBrains家族的go IDE" />
+  <meta name="description" content="安装工具 go，支持go语言编译。MAC下推荐使用使用brew安装go Linux，Win环境安装方法参考安装 Go brew install go delv，支持go语言调试" />
 
-  <meta name="keywords" content="Bing, Ethereum, 以太坊" />
+  <meta name="keywords" content="Bing, Ethereum, 以太坊, 区块链" />
 
 
 
@@ -50,7 +50,7 @@
 
 
 <meta property="og:title" content="以太坊开发环境搭建" />
-<meta property="og:description" content="安装工具 go，支持go语言编译（MAC下使用brew安装） brew install go delv，支持go语言调试 brew install delv goland，jetBrains家族的go IDE" />
+<meta property="og:description" content="安装工具 go，支持go语言编译。MAC下推荐使用使用brew安装go Linux，Win环境安装方法参考安装 Go brew install go delv，支持go语言调试" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" />
 
@@ -71,19 +71,19 @@
 
 
 <meta itemprop="name" content="以太坊开发环境搭建">
-<meta itemprop="description" content="安装工具 go，支持go语言编译（MAC下使用brew安装） brew install go delv，支持go语言调试 brew install delv goland，jetBrains家族的go IDE">
+<meta itemprop="description" content="安装工具 go，支持go语言编译。MAC下推荐使用使用brew安装go Linux，Win环境安装方法参考安装 Go brew install go delv，支持go语言调试">
 
 
 <meta itemprop="datePublished" content="2018-06-20T18:34:35&#43;08:00" />
 <meta itemprop="dateModified" content="2018-06-20T18:34:35&#43;08:00" />
-<meta itemprop="wordCount" content="319">
+<meta itemprop="wordCount" content="538">
 
 
 
 <meta itemprop="keywords" content="以太坊," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="以太坊开发环境搭建"/>
-<meta name="twitter:description" content="安装工具 go，支持go语言编译（MAC下使用brew安装） brew install go delv，支持go语言调试 brew install delv goland，jetBrains家族的go IDE"/>
+<meta name="twitter:description" content="安装工具 go，支持go语言编译。MAC下推荐使用使用brew安装go Linux，Win环境安装方法参考安装 Go brew install go delv，支持go语言调试"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -162,10 +162,14 @@
     <div class="post-content">
       
 
-<h4 id="安装工具">安装工具</h4>
+<h3 id="安装工具">安装工具</h3>
 
 <ul>
-<li>go，支持go语言编译（MAC下使用brew安装）</li>
+<li>go，支持go语言编译。MAC下推荐使用使用brew安装go
+
+<ul>
+<li>Linux，Win环境安装方法参考<a href="https://github.com/astaxie/build-web-application-with-golang/blob/master/zh/01.1.md">安装 Go</a></li>
+</ul></li>
 </ul>
 
 <pre><code class="language-sh">brew install go
@@ -179,40 +183,54 @@
 </code></pre>
 
 <ul>
-<li>goland，jetBrains家族的go IDE
-<a href="https://www.jetbrains.com/go/">https://www.jetbrains.com/go/</a></li>
-</ul>
-
-<h4 id="准备源码">准备源码</h4>
+<li><p>安装IDE。这里选择GoLand，支持代码声明和引用之间跳转，支持使用delve进行调试，调试时貌似不能在watch窗口中调用函数</p>
 
 <ul>
-<li>下载go ethereum 源码，至~/go/src/github.com/ethereum/go-ethereum（MAC下GOPATH为~/go）</li>
+<li>我在使用vs code断点调试时发现不能正常显示局部变量，遂放弃</li>
+<li>更多环境配置参考<a href="https://github.com/astaxie/build-web-application-with-golang/blob/master/zh/01.4.md">Go开发工具</a></li>
+<li>GoLand是jetBrains家族的go IDE<a href="https://www.jetbrains.com/go/">下载地址</a></li>
+</ul></li>
 </ul>
 
-<p><a href="https://github.com/ethereum/go-ethereum">https://github.com/ethereum/go-ethereum</a></p>
+<h3 id="准备源码">准备源码</h3>
 
-<pre><code class="language-sh">git clone https://github.com/ethereum/go-ethereum.git
+<ul>
+<li>下载go ethereum 源码，至${HOME}/go/src/github.com/ethereum/go-ethereum（MAC下GOPATH为${HOME}/go）<a href="https://github.com/ethereum/go-ethereum">源码地址</a></li>
+</ul>
+
+<pre><code class="language-sh">go get github.com/ethereum/go-ethereum
 </code></pre>
 
+<h3 id="编译调试">编译调试</h3>
+
 <ul>
-<li>打开GoLand，加载go-ethereum为工作空间</li>
+<li>打开GoLand，加载go-ethereum目录为工作空间
+
+<ul>
 <li>go get 相关依赖包，比如github.com/syndtr/goleveldb/leveldb。如果缺少依赖，相关依赖包import会标红</li>
-
-<li><p>GoLand会去检测你的go, delv bin目录，不需要额外配置就可以愉快地阅读代码了</p>
-
-<h4 id="编译调试">编译调试</h4></li>
-
-<li><p>Edit Configurations 添加 Go Build</p></li>
-</ul>
-
-<pre><code class="language-yaml">Run Kind: Directory
-Directory: ${HOME}/go/src/github.com/ethereum/go-ethereum/cmd/geth
-</code></pre>
-
-<ul>
+<li>GoLand会去检测go和delv的bin目录，不需要额外配置就可以愉快地阅读代码了</li>
+<li>Edit Configurations 添加 Go Build</li>
 <li>配置完之后进入debug</li>
 <li>编译的二进制文件在 ~/go/src/github.com/ethereum/go-ethereum/build/bin 目录下</li>
+</ul></li>
 </ul>
+
+<pre><code class="language-yaml"># Edit Configuration 配置
+# ${HOME} 请自行替换为本机的用户目录
+Run Kind: Directory
+Directory: ${HOME}/go/src/github.com/ethereum/go-ethereum/cmd/geth
+Workding directory: ${HOME}/test
+Go tool arguments: -i
+Program arguments: --datadir data
+</code></pre>
+
+<hr />
+
+<blockquote>
+<p>持续学习中，理解可能有误，敬请谅解</p>
+
+<p>版权所有，转载请注明来源</p>
+</blockquote>
 
     </div>
 
