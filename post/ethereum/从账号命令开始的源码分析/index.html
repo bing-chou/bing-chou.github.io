@@ -76,7 +76,7 @@
 
 <meta itemprop="datePublished" content="2018-06-21T20:31:27&#43;08:00" />
 <meta itemprop="dateModified" content="2018-06-21T20:31:27&#43;08:00" />
-<meta itemprop="wordCount" content="1035">
+<meta itemprop="wordCount" content="999">
 
 
 
@@ -270,14 +270,7 @@
 // updates the account cache accordingly
 func (ac *accountCache) scanAccounts() error {
 	// Scan the entire folder metadata for file changes
-	creates, deletes, updates, err := ac.fileC.scan(ac.keydir)
-	if err != nil {
-		log.Debug(&quot;Failed to reload keystore contents&quot;, &quot;err&quot;, err)
-		return err
-	}
-	if creates.Size() == 0 &amp;&amp; deletes.Size() == 0 &amp;&amp; updates.Size() == 0 {
-		return nil
-	}
+    ...
 	// Create a helper method to scan the contents of the key files
 	var (
 		buf = new(bufio.Reader)
