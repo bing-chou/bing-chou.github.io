@@ -17,7 +17,7 @@
       <pubDate>Thu, 21 Jun 2018 14:53:21 +0800</pubDate>
       
       <guid>http://localhost:1313/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E7%A7%81%E6%9C%89%E9%93%BE%E6%90%AD%E5%BB%BA%E5%8F%8A%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</guid>
-      <description>参考链接 Private network How To: Create Your Own Private Ethereum Blockchain 准备工作 使用编译获得的二进制文件创建一个账户，输入密码，获得账户地址${ADDR} sh ./geth account new 创建genesis.j</description>
+      <description>参考链接 Private network How To: Create Your Own Private Ethereum Blockchain 准备工作 为方便使用可以将编译得到的二进制可执行文件geth拷贝到我们的测试工作目录${HOME}/test 使用g</description>
     </item>
     
     <item>
