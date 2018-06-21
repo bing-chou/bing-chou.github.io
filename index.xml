@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bing - Never stop</title>
-    <link>http://localhost:1313/</link>
+    <link>https://bing-chou.github.io/</link>
     <description>Recent content on Bing - Never stop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 21 Jun 2018 14:53:21 +0800</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://bing-chou.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>以太坊私有链搭建及基本操作</title>
-      <link>http://localhost:1313/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E7%A7%81%E6%9C%89%E9%93%BE%E6%90%AD%E5%BB%BA%E5%8F%8A%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</link>
+      <link>https://bing-chou.github.io/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E7%A7%81%E6%9C%89%E9%93%BE%E6%90%AD%E5%BB%BA%E5%8F%8A%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</link>
       <pubDate>Thu, 21 Jun 2018 14:53:21 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E7%A7%81%E6%9C%89%E9%93%BE%E6%90%AD%E5%BB%BA%E5%8F%8A%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</guid>
+      <guid>https://bing-chou.github.io/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E7%A7%81%E6%9C%89%E9%93%BE%E6%90%AD%E5%BB%BA%E5%8F%8A%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</guid>
       <description>参考链接 Private network How To: Create Your Own Private Ethereum Blockchain 准备工作 为方便使用可以将编译得到的二进制可执行文件geth拷贝到我们的测试工作目录${HOME}/test 使用g</description>
     </item>
     
     <item>
       <title>以太坊开发环境搭建</title>
-      <link>http://localhost:1313/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</link>
+      <link>https://bing-chou.github.io/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</link>
       <pubDate>Wed, 20 Jun 2018 18:34:35 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</guid>
+      <guid>https://bing-chou.github.io/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</guid>
       <description>安装工具 go，支持go语言编译。MAC下推荐使用使用brew安装go Linux，Win环境安装方法参考 安装 Go brew install go delv，支持go语言调试</description>
     </item>
     
