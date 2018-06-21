@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>从账号命令开始的源码分析 - Bing - Never stop</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Bing" />
+  <meta name="description" content="引言 在以太坊私有链搭建及基本操作中，使用了下面的命令来新建账号。接下来我就来看下以太坊账号的原理 ./geth --datadir data account new 另外，我们还关心一个命令 list ./geth --datadir data account" />
+
+  <meta name="keywords" content="Bing, Ethereum, 以太坊, 区块链" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.42.1" />
+
+
+<link rel="canonical" href="https://bing-chou.github.io/post/ethereum/%E4%BB%8E%E8%B4%A6%E5%8F%B7%E5%91%BD%E4%BB%A4%E5%BC%80%E5%A7%8B%E7%9A%84%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="从账号命令开始的源码分析" />
+<meta property="og:description" content="引言 在以太坊私有链搭建及基本操作中，使用了下面的命令来新建账号。接下来我就来看下以太坊账号的原理 ./geth --datadir data account new 另外，我们还关心一个命令 list ./geth --datadir data account" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bing-chou.github.io/post/ethereum/%E4%BB%8E%E8%B4%A6%E5%8F%B7%E5%91%BD%E4%BB%A4%E5%BC%80%E5%A7%8B%E7%9A%84%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/" />
+
+
+
+<meta property="article:published_time" content="2018-06-21T20:31:27&#43;08:00"/>
+
+<meta property="article:modified_time" content="2018-06-21T20:31:27&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="从账号命令开始的源码分析">
+<meta itemprop="description" content="引言 在以太坊私有链搭建及基本操作中，使用了下面的命令来新建账号。接下来我就来看下以太坊账号的原理 ./geth --datadir data account new 另外，我们还关心一个命令 list ./geth --datadir data account">
+
+
+<meta itemprop="datePublished" content="2018-06-21T20:31:27&#43;08:00" />
+<meta itemprop="dateModified" content="2018-06-21T20:31:27&#43;08:00" />
+<meta itemprop="wordCount" content="1035">
+
+
+
+<meta itemprop="keywords" content="以太坊," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="从账号命令开始的源码分析"/>
+<meta name="twitter:description" content="引言 在以太坊私有链搭建及基本操作中，使用了下面的命令来新建账号。接下来我就来看下以太坊账号的原理 ./geth --datadir data account new 另外，我们还关心一个命令 list ./geth --datadir data account"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Bing</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Bing</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">从账号命令开始的源码分析</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-06-21 </span>
+        
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    
+    
+
+    
+    <div class="post-content">
+      
+
+<h4 id="引言">引言</h4>
+
+<p>在<a href="https://bing-chou.github.io/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E7%A7%81%E6%9C%89%E9%93%BE%E6%90%AD%E5%BB%BA%E5%8F%8A%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">以太坊私有链搭建及基本操作</a>中，使用了下面的命令来新建账号。接下来我就来看下以太坊账号的原理</p>
+
+<pre><code class="language-sh">./geth --datadir data account new
+</code></pre>
+
+<p>另外，我们还关心一个命令 list</p>
+
+<pre><code class="language-sh">./geth --datadir data account list
+</code></pre>
+
+<ul>
+<li>账号文件目录
+
+<ul>
+<li>data/keystore</li>
+<li>打开其中一个账号文件，可以看到（部分字符被&hellip;代替）</li>
+</ul></li>
+</ul>
+
+<pre><code class="language-json">{
+  &quot;address&quot;: &quot;...c2504e15b05572df94f0df385cf3c4b130879&quot;,
+  &quot;crypto&quot;: {
+    &quot;cipher&quot;: &quot;aes-128-ctr&quot;,
+    &quot;ciphertext&quot;: &quot;d4...37&quot;,
+    &quot;cipherparams&quot;: {
+      &quot;iv&quot;: &quot;94...a2&quot;
+    },
+    &quot;kdf&quot;: &quot;scrypt&quot;,
+    &quot;kdfparams&quot;: {
+      &quot;dklen&quot;: 32,
+      &quot;n&quot;: 262144,
+      &quot;p&quot;: 1,
+      &quot;r&quot;: 8,
+      &quot;salt&quot;: &quot;cf...0f&quot;
+    },
+    &quot;mac&quot;: &quot;26...7c&quot;
+  },
+  &quot;id&quot;: &quot;75...11&quot;,
+  &quot;version&quot;: 3
+}
+</code></pre>
+
+<ul>
+<li>地址就是其中的address字段，所以address是直接存储的</li>
+<li>密钥逻辑
+
+<ul>
+<li>关于 <a href="https://zh.wikipedia.org/wiki/%E5%85%AC%E5%BC%80%E5%AF%86%E9%92%A5%E5%8A%A0%E5%AF%86">非对称加密</a></li>
+<li>几个概念：公钥pubKey，私钥privKey，密码pass，签名sign，任意内容content</li>
+<li>每笔交易发起会去校验由私钥+密码是否能够得到账号地址：privKey+pass -&gt; address，由此需要密码和私钥才能发起交易</li>
+<li>交易被确认前校验由公钥+内容能否解析出私钥+内容加密得到的签名：pubKey + content -&gt; sign=[privKey+content]</li>
+</ul></li>
+</ul>
+
+<h3 id="从main函数开始">从main函数开始</h3>
+
+<p>当运行如下命令时</p>
+
+<pre><code class="language-sh">./geth --datadir data account list
+</code></pre>
+
+<p>首先会进入cmd/geth/main.go的主函数</p>
+
+<pre><code class="language-go">func main() {
+	if err := app.Run(os.Args); err != nil {
+		fmt.Fprintln(os.Stderr, err)
+		os.Exit(1)
+	}
+}
+</code></pre>
+
+<p>随后，解析参数放入上下文context，如果发现命令，则进入命令。命令行框架由<a href="https://github.com/urfave/cli">cli</a>提供</p>
+
+<pre><code class="language-go">	args := context.Args()
+	if args.Present() {
+		name := args.First()
+		c := a.Command(name)
+		if c != nil {
+			return c.Run(context)
+		}
+	}
+</code></pre>
+
+<p>具体地，account list 命令进入cmd/geth/accountcmd.go的accountList</p>
+
+<pre><code class="language-go">func accountList(ctx *cli.Context) error {
+	stack, _ := makeConfigNode(ctx)
+	var index int
+	for _, wallet := range stack.AccountManager().Wallets() {
+		for _, account := range wallet.Accounts() {
+			fmt.Printf(&quot;Account #%d: {%x} %s\n&quot;, index, account.Address, &amp;account.URL)
+			index++
+		}
+	}
+	return nil
+}
+</code></pre>
+
+<p>accountList会去keystore目录找出所有账号文件，解析json，拿到所有address字段</p>
+
+<pre><code class="language-go">//accounts/keystore/account_cache.go
+
+// scanAccounts checks if any changes have occurred on the filesystem, and
+// updates the account cache accordingly
+func (ac *accountCache) scanAccounts() error {
+	// Scan the entire folder metadata for file changes
+	creates, deletes, updates, err := ac.fileC.scan(ac.keydir)
+	if err != nil {
+		log.Debug(&quot;Failed to reload keystore contents&quot;, &quot;err&quot;, err)
+		return err
+	}
+	if creates.Size() == 0 &amp;&amp; deletes.Size() == 0 &amp;&amp; updates.Size() == 0 {
+		return nil
+	}
+	// Create a helper method to scan the contents of the key files
+	var (
+		buf = new(bufio.Reader)
+		key struct {
+			Address string `json:&quot;address&quot;`
+		}
+	)
+	readAccount := func(path string) *accounts.Account {
+		fd, err := os.Open(path)
+		if err != nil {
+			log.Trace(&quot;Failed to open keystore file&quot;, &quot;path&quot;, path, &quot;err&quot;, err)
+			return nil
+		}
+		defer fd.Close()
+		buf.Reset(fd)
+		// Parse the address.
+		key.Address = &quot;&quot;
+		err = json.NewDecoder(buf).Decode(&amp;key)
+		addr := common.HexToAddress(key.Address)
+        ...
+</code></pre>
+
+<p>对于account new原理类似，使用加密算法创建账户文件</p>
+
+<p>对于unlock，正如引言所说，验证privKey+pass-&gt;address</p>
+
+<pre><code class="language-go">// cmd/geth/accountcmd.go
+
+// tries unlocking the specified account a few times.
+func unlockAccount(ctx *cli.Context, ks *keystore.KeyStore, address string, i int, passwords []string) (accounts.Account, string) {
+	account, err := utils.MakeAddress(ks, address)
+	if err != nil {
+		utils.Fatalf(&quot;Could not list accounts: %v&quot;, err)
+	}
+	for trials := 0; trials &lt; 3; trials++ {
+		prompt := fmt.Sprintf(&quot;Unlocking account %s | Attempt %d/%d&quot;, address, trials+1, 3)
+		password := getPassPhrase(prompt, false, i, passwords)
+		err = ks.Unlock(account, password)
+        ...
+</code></pre>
+
+<p>对于交易，需要将pubKey和签名和交易数据放在一起，让其他peer验证，如K V S字段所示</p>
+
+<pre><code class="language-go">//core/types/transaction.go
+
+type txdata struct {
+	AccountNonce uint64          `json:&quot;nonce&quot;    gencodec:&quot;required&quot;`
+	Price        *big.Int        `json:&quot;gasPrice&quot; gencodec:&quot;required&quot;`
+	GasLimit     uint64          `json:&quot;gas&quot;      gencodec:&quot;required&quot;`
+	Recipient    *common.Address `json:&quot;to&quot;       rlp:&quot;nil&quot;` // nil means contract creation
+	Amount       *big.Int        `json:&quot;value&quot;    gencodec:&quot;required&quot;`
+	Payload      []byte          `json:&quot;input&quot;    gencodec:&quot;required&quot;`
+
+	// Signature values
+	V *big.Int `json:&quot;v&quot; gencodec:&quot;required&quot;`
+	R *big.Int `json:&quot;r&quot; gencodec:&quot;required&quot;`
+	S *big.Int `json:&quot;s&quot; gencodec:&quot;required&quot;`
+
+	// This is only used when marshaling to JSON.
+	Hash *common.Hash `json:&quot;hash&quot; rlp:&quot;-&quot;`
+}
+</code></pre>
+
+<hr />
+
+<blockquote>
+<p>持续学习中，理解可能有误，敬请谅解</p>
+
+<p>版权所有，转载请注明来源</p>
+</blockquote>
+
+    </div>
+
+    
+    
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/%E4%BB%A5%E5%A4%AA%E5%9D%8A/">以太坊</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/ethereum/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E9%83%A8%E7%BD%B2/">
+            <span class="next-text nav-default">智能合约部署</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/bing-chou" class="iconfont icon-github" title="github"></a>
+  <a href="https://bing-chou.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Bing</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
