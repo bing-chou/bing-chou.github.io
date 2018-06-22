@@ -76,7 +76,7 @@
 
 <meta itemprop="datePublished" content="2018-06-21T20:31:27&#43;08:00" />
 <meta itemprop="dateModified" content="2018-06-21T20:31:27&#43;08:00" />
-<meta itemprop="wordCount" content="1121">
+<meta itemprop="wordCount" content="1350">
 
 
 
@@ -337,6 +337,18 @@ type txdata struct {
 </code></pre>
 
 <h3 id="代码调用路径">代码调用路径</h3>
+
+<pre><code class="language-mermaid">graph TD
+A(cmd/geth/main.go main) --&gt;B(urfave/cli.v1 Run)
+B --&gt; C(cmd/geth/accountcmd.go accountList)
+C --&gt;|Node配置初始化| D(cmd/geth/config.go makeConfigNode)
+C --&gt;|查询账户|E(accounts/manage.go Wallets)
+D --&gt; F(node/node.go New)
+F --&gt; G(node/config.go makeAccountManager)
+G --&gt; |配置keystore目录|H(accounts/keystore/keystore.go NewKeyStore)
+H --&gt; |初始化账户cache|J(accounts/keystore/account_cache.go newAccountCache)
+H --&gt; |扫描keystore目录加载账户|K(accounts/keystore/account_cache.go accounts )
+</code></pre>
 
 <p><img src="/images/ethereum/accout_list.svg" alt="代码调用路径" /></p>
 
