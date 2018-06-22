@@ -6,10 +6,19 @@
     <description>Recent content on Bing - Never stop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 21 Jun 2018 20:31:27 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 22 Jun 2018 19:19:57 +0800</lastBuildDate>
     
 	<atom:link href="https://bing-chou.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>以太坊架构</title>
+      <link>https://bing-chou.github.io/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E6%9E%B6%E6%9E%84/</link>
+      <pubDate>Fri, 22 Jun 2018 19:19:57 +0800</pubDate>
+      
+      <guid>https://bing-chou.github.io/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E6%9E%B6%E6%9E%84/</guid>
+      <description>引言 最好的以太坊架构介绍莫过于黄皮书和代码本身 Ethereum Yellow Paper go-ethereum 下面还列举了一些可能有帮助的文档 Ethereum Frontier Guide Ethereum Wiki 待续 架构总览 Lee Thomas 给出了一份很直观的图 图片来源</description>
+    </item>
     
     <item>
       <title>从账号命令开始的源码分析</title>
