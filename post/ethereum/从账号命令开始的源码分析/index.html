@@ -76,7 +76,7 @@
 
 <meta itemprop="datePublished" content="2018-06-21T20:31:27&#43;08:00" />
 <meta itemprop="dateModified" content="2018-06-21T20:31:27&#43;08:00" />
-<meta itemprop="wordCount" content="1115">
+<meta itemprop="wordCount" content="1121">
 
 
 
@@ -314,7 +314,7 @@ func unlockAccount(ctx *cli.Context, ks *keystore.KeyStore, address string, i in
         ...
 </code></pre>
 
-<p>对于交易，需要将pubKey和签名和交易数据放在一起，让其他peer验证，如K V S字段所示</p>
+<p>对于交易，需要将pubKey和签名和交易数据放在一起，让其他peer验证，如V R S字段所示</p>
 
 <pre><code class="language-go">//core/types/transaction.go
 
@@ -335,6 +335,10 @@ type txdata struct {
 	Hash *common.Hash `json:&quot;hash&quot; rlp:&quot;-&quot;`
 }
 </code></pre>
+
+<h3 id="代码调用路径">代码调用路径</h3>
+
+<p><img src="/images/ethereum/accout_list.svg" alt="代码调用路径" /></p>
 
 <hr />
 
