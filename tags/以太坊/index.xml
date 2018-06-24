@@ -53,7 +53,7 @@
       <pubDate>Wed, 20 Jun 2018 18:34:35 +0800</pubDate>
       
       <guid>https://bing-chou.github.io/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</guid>
-      <description>安装工具 go，支持go语言编译。MAC下推荐使用使用brew安装go Linux，Win环境安装方法参考 安装 Go brew install go delv，支持go语言调试</description>
+      <description>安装工具 go，支持go语言编译。MAC下推荐使用使用brew安装go Linux，Win环境安装方法参考 安装 Go brew install go delve，支持go语言调</description>
     </item>
     
   </channel>
