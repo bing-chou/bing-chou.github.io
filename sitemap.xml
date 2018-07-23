@@ -3,6 +3,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://bing-chou.github.io/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8Akeystore%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</loc>
+    <lastmod>2018-07-23T17:53:18+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://bing-chou.github.io/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E6%9E%B6%E6%9E%84/</loc>
     <lastmod>2018-06-22T19:19:57+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -39,7 +46,7 @@
   
   <url>
     <loc>https://bing-chou.github.io/</loc>
-    <lastmod>2018-06-22T19:19:57+08:00</lastmod>
+    <lastmod>2018-07-23T17:53:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -52,7 +59,7 @@
   
   <url>
     <loc>https://bing-chou.github.io/post/</loc>
-    <lastmod>2018-06-22T19:19:57+08:00</lastmod>
+    <lastmod>2018-07-23T17:53:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -65,7 +72,7 @@
   
   <url>
     <loc>https://bing-chou.github.io/tags/%E4%BB%A5%E5%A4%AA%E5%9D%8A/</loc>
-    <lastmod>2018-06-22T19:19:57+08:00</lastmod>
+    <lastmod>2018-07-23T17:53:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

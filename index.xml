@@ -6,10 +6,19 @@
     <description>Recent content on Bing - Never stop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 22 Jun 2018 19:19:57 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 23 Jul 2018 17:53:18 +0800</lastBuildDate>
     
 	<atom:link href="https://bing-chou.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>以太坊Keystore基本原理</title>
+      <link>https://bing-chou.github.io/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8Akeystore%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</link>
+      <pubDate>Mon, 23 Jul 2018 17:53:18 +0800</pubDate>
+      
+      <guid>https://bing-chou.github.io/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8Akeystore%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</guid>
+      <description>交易签名 非对称加密中会涉及到私钥和公钥的概念。我们这里称私钥为PrivKey，公钥为PubKey，需要验证的消息是message，签名为si</description>
+    </item>
     
     <item>
       <title>以太坊架构</title>
