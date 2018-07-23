@@ -221,19 +221,20 @@
 </code></pre>
 
 <ul>
-<li><p>genesis.json的解释</p>
+<li>genesis.json的解释
 
 <ul>
 <li>chainId: 链id，以太坊主网id为1，测试网id为3，Rinkeby网为4。这里我们选个大于10的随机数就行</li>
 <li>difficulty: 难度系数，这里设得很小，40000，这样交易确认会比较快，方便调试</li>
 <li>gasLimit: block消耗gas上限，不能太小，不然合约交易无法成功。这里210000000，在官方建议的基础上多加了2个0</li>
-
-<li><p>alloc 为特定账户分配balance，${ADDR}替换为上一步中获得的实际账户地址</p>
-
-<h3 id="首次启动私有网络">首次启动私有网络</h3></li>
+<li>alloc 为特定账户分配balance，${ADDR}替换为上一步中获得的实际账户地址</li>
 </ul></li>
+</ul>
 
-<li><p>建立创世block</p></li>
+<h3 id="首次启动私有网络">首次启动私有网络</h3>
+
+<ul>
+<li>建立创世block</li>
 </ul>
 
 <pre><code class="language-sh">./geth --datadir data init genesis.json
