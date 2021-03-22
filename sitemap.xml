@@ -1,6 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <?xml-stylesheet type="text/xsl" href="https://bing-chou.github.io/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://bing-chou.github.io/</loc>
+    <lastmod>2018-07-23T17:53:18+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bing-chou.github.io/post/</loc>
+    <lastmod>2018-07-23T17:53:18+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bing-chou.github.io/tags/</loc>
+    <lastmod>2018-07-23T17:53:18+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bing-chou.github.io/tags/%E4%BB%A5%E5%A4%AA%E5%9D%8A/</loc>
+    <lastmod>2018-07-23T17:53:18+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
   
   <url>
     <loc>https://bing-chou.github.io/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8Akeystore%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</loc>
@@ -45,36 +72,9 @@
   </url>
   
   <url>
-    <loc>https://bing-chou.github.io/</loc>
-    <lastmod>2018-07-23T17:53:18+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://bing-chou.github.io/categories/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://bing-chou.github.io/post/</loc>
-    <lastmod>2018-07-23T17:53:18+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://bing-chou.github.io/tags/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://bing-chou.github.io/tags/%E4%BB%A5%E5%A4%AA%E5%9D%8A/</loc>
-    <lastmod>2018-07-23T17:53:18+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
+    <priority>0.5</priority>
   </url>
   
 </urlset>

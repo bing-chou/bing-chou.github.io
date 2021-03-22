@@ -16,74 +16,43 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Bing" />
-  <meta name="description" content="安装工具 go，支持go语言编译。MAC下推荐使用使用brew安装go Linux，Win环境安装方法参考 安装 Go brew install go delve，支持go语言调" />
-
-  <meta name="keywords" content="Bing, Ethereum, 以太坊, 区块链" />
+<meta name="author" content="Bing" /><meta name="description" content="安装工具 go，支持go语言编译。MAC下推荐使用使用brew安装go Linux，Win环境安装方法参考 安装 Go 1 brew install go delve，支持go语言" /><meta name="keywords" content="Bing, Ethereum, 以太坊, 区块链" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.42.1" />
+<meta name="generator" content="Hugo 0.82.0 with theme even" />
 
 
 <link rel="canonical" href="https://bing-chou.github.io/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" />
-
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/manifest.json">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-
-
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-
-<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
-
-
+<link href="/sass/main.min.39a3e01cac9473be1356f3572fcfe34b2e363efabad244a99a40f28a812c837e.css" rel="stylesheet">
 
 
 
 <meta property="og:title" content="以太坊开发环境搭建" />
-<meta property="og:description" content="安装工具 go，支持go语言编译。MAC下推荐使用使用brew安装go Linux，Win环境安装方法参考 安装 Go brew install go delve，支持go语言调" />
+<meta property="og:description" content="安装工具 go，支持go语言编译。MAC下推荐使用使用brew安装go Linux，Win环境安装方法参考 安装 Go 1 brew install go delve，支持go语言" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://bing-chou.github.io/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" />
-
-
-
-<meta property="article:published_time" content="2018-06-20T18:34:35&#43;08:00"/>
-
-<meta property="article:modified_time" content="2018-06-20T18:34:35&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="og:url" content="https://bing-chou.github.io/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2018-06-20T18:34:35&#43;08:00" />
+<meta property="article:modified_time" content="2018-06-20T18:34:35&#43;08:00" />
 
 <meta itemprop="name" content="以太坊开发环境搭建">
-<meta itemprop="description" content="安装工具 go，支持go语言编译。MAC下推荐使用使用brew安装go Linux，Win环境安装方法参考 安装 Go brew install go delve，支持go语言调">
-
-
-<meta itemprop="datePublished" content="2018-06-20T18:34:35&#43;08:00" />
+<meta itemprop="description" content="安装工具 go，支持go语言编译。MAC下推荐使用使用brew安装go Linux，Win环境安装方法参考 安装 Go 1 brew install go delve，支持go语言"><meta itemprop="datePublished" content="2018-06-20T18:34:35&#43;08:00" />
 <meta itemprop="dateModified" content="2018-06-20T18:34:35&#43;08:00" />
-<meta itemprop="wordCount" content="591">
-
-
-
-<meta itemprop="keywords" content="以太坊," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="wordCount" content="593">
+<meta itemprop="keywords" content="以太坊," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="以太坊开发环境搭建"/>
-<meta name="twitter:description" content="安装工具 go，支持go语言编译。MAC下推荐使用使用brew安装go Linux，Win环境安装方法参考 安装 Go brew install go delve，支持go语言调"/>
+<meta name="twitter:description" content="安装工具 go，支持go语言编译。MAC下推荐使用使用brew安装go Linux，Win环境安装方法参考 安装 Go 1 brew install go delve，支持go语言"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -116,12 +85,21 @@
         <li class="mobile-menu-item">标签</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Bing</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -134,6 +112,7 @@
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -147,131 +126,128 @@
       <div class="post-meta">
         <span class="post-time"> 2018-06-20 </span>
         
-        
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
     </header>
 
-    
-    
-<div class="post-toc" id="post-toc">
+    <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
-  
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#安装工具">安装工具</a></li>
-<li><a href="#准备源码">准备源码</a></li>
-<li><a href="#编译调试">编译调试</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#安装工具">安装工具</a></li>
+        <li><a href="#准备源码">准备源码</a></li>
+        <li><a href="#编译调试">编译调试</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
   </div>
 </div>
-
-    
-    
-
-    
     <div class="post-content">
-      
-
-<h3 id="安装工具">安装工具</h3>
-
+      <h3 id="安装工具">安装工具</h3>
 <ul>
 <li>go，支持go语言编译。MAC下推荐使用使用brew安装go
-
 <ul>
 <li>Linux，Win环境安装方法参考 <a href="https://github.com/astaxie/build-web-application-with-golang/blob/master/zh/01.1.md">安装 Go</a></li>
-</ul></li>
 </ul>
-
-<pre><code class="language-sh">brew install go
-</code></pre>
-
-<ul>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">brew install go
+</code></pre></td></tr></table>
+</div>
+</div><ul>
 <li>delve，支持go语言调试</li>
 </ul>
-
-<pre><code class="language-sh">brew install go-delve/delve/delve
-</code></pre>
-
-<ul>
-<li><p>安装IDE。这里选择GoLand，支持代码声明和引用之间跳转，支持使用delve进行调试，调试时貌似不能在watch窗口中调用函数</p>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">brew install go-delve/delve/delve
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p>安装IDE。这里选择GoLand，支持代码声明和引用之间跳转，支持使用delve进行调试，调试时貌似不能在watch窗口中调用函数</p>
 <ul>
 <li>我在使用vs code断点调试时发现不能正常显示局部变量，遂放弃</li>
 <li>更多环境配置参考 <a href="https://github.com/astaxie/build-web-application-with-golang/blob/master/zh/01.4.md">Go开发工具</a></li>
 <li>GoLand是jetBrains家族的go IDE <a href="https://www.jetbrains.com/go/">下载地址</a></li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h3 id="准备源码">准备源码</h3>
-
 <ul>
 <li>下载go ethereum 源码，至${HOME}/go/src/github.com/ethereum/go-ethereum（MAC下GOPATH为${HOME}/go）<a href="https://github.com/ethereum/go-ethereum">源码地址</a></li>
 <li>由于不可描述原因，可能网络连接会出现问题，请自行google解决</li>
 </ul>
-
-<pre><code class="language-sh">go get github.com/ethereum/go-ethereum
-</code></pre>
-
-<h3 id="编译调试">编译调试</h3>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">go get github.com/ethereum/go-ethereum
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="编译调试">编译调试</h3>
 <ul>
 <li>打开GoLand，加载go-ethereum目录为工作空间
-
 <ul>
 <li>go get 相关依赖包，比如github.com/syndtr/goleveldb/leveldb。如果缺少依赖，相关依赖包import会标红</li>
 <li>GoLand会去检测go和delve的bin目录，不需要额外配置就可以愉快地阅读代码了</li>
 <li>Edit Configurations 添加 Go Build</li>
 <li>配置完之后进入debug</li>
 <li>编译的二进制文件在${HOME}/test/build/目录下</li>
-</ul></li>
 </ul>
-
-<pre><code class="language-yaml"># Edit Configuration 配置
-# ${HOME} 请自行替换为本机的用户目录
-Run Kind: Directory
-Directory: ${HOME}/go/src/github.com/ethereum/go-ethereum/cmd/geth
-Output directory: ${HOME}/test/build
-Workding directory: ${HOME}/test
-Go tool arguments: -i
-Program arguments: --datadir data
-</code></pre>
-
-<hr />
-
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="c"># Edit Configuration 配置</span><span class="w">
+</span><span class="w"></span><span class="c"># ${HOME} 请自行替换为本机的用户目录</span><span class="w">
+</span><span class="w"></span><span class="nt">Run Kind</span><span class="p">:</span><span class="w"> </span><span class="l">Directory</span><span class="w">
+</span><span class="w"></span><span class="nt">Directory</span><span class="p">:</span><span class="w"> </span><span class="l">${HOME}/go/src/github.com/ethereum/go-ethereum/cmd/geth</span><span class="w">
+</span><span class="w"></span><span class="nt">Output directory</span><span class="p">:</span><span class="w"> </span><span class="l">${HOME}/test/build</span><span class="w">
+</span><span class="w"></span><span class="nt">Workding directory</span><span class="p">:</span><span class="w"> </span><span class="l">${HOME}/test</span><span class="w">
+</span><span class="w"></span><span class="nt">Go tool arguments</span><span class="p">:</span><span class="w"> </span>-<span class="l">i</span><span class="w">
+</span><span class="w"></span><span class="nt">Program arguments</span><span class="p">:</span><span class="w"> </span>--<span class="l">datadir data</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><hr>
 <blockquote>
 <p>持续学习中，理解可能有误，敬请谅解</p>
-
+</blockquote>
+<blockquote>
 <p>版权所有，转载请注明来源</p>
 </blockquote>
 
     </div>
 
     
-    
-
-    
-    
-
-    <footer class="post-footer">
+<footer class="post-footer">
       <div class="post-tags">
-          
           <a href="/tags/%E4%BB%A5%E5%A4%AA%E5%9D%8A/">以太坊</a>
-          
-        </div>
-
-      
+          </div>
       <nav class="post-nav">
-        
-          <a class="prev" href="/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E7%A7%81%E6%9C%89%E9%93%BE%E6%90%AD%E5%BB%BA%E5%8F%8A%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
+        <a class="prev" href="/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E7%A7%81%E6%9C%89%E9%93%BE%E6%90%AD%E5%BB%BA%E5%8F%8A%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
             <i class="iconfont icon-left"></i>
             <span class="prev-text nav-default">以太坊私有链搭建及基本操作</span>
             <span class="prev-text nav-mobile">上一篇</span>
@@ -304,19 +280,17 @@ Program arguments: --datadir data
 
   <div class="busuanzi-footer">
     <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
-    <span class="division">|</span>
+      <span class="division">|</span>
     <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
   </div>
 
   <span class="copyright-year">
     &copy; 
-    2018
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">Bing</span>
+    2018 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>Bing</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -324,23 +298,15 @@ Program arguments: --datadir data
     </div>
   </div>
   
-<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   
 
 
-<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
 
-<script id="baidu_analytics">
-  var _hmt = _hmt || [];
-  (function() {
-    if (window.location.hostname === 'localhost') return;
-    var hm = document.createElement("script"); hm.async = true;
-    hm.src = "https://hm.baidu.com/hm.js?3732599b0b9fcaff18c0c25a12a40ad6";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(hm, s);
-  })();
-</script>
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
 
 
 

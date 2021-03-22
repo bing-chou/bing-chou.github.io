@@ -16,72 +16,41 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Bing" />
-  <meta name="description" content="交易签名 非对称加密中会涉及到私钥和公钥的概念。我们这里称私钥为PrivKey，公钥为PubKey，需要验证的消息是message，签名为si" />
-
-  <meta name="keywords" content="Bing, Ethereum, 以太坊, 区块链" />
+<meta name="author" content="Bing" /><meta name="description" content="交易签名 非对称加密中会涉及到私钥和公钥的概念。我们这里称私钥为PrivKey，公钥为PubKey，需要验证的消息是message，签名为si" /><meta name="keywords" content="Bing, Ethereum, 以太坊, 区块链" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.42.1" />
+<meta name="generator" content="Hugo 0.82.0 with theme even" />
 
 
 <link rel="canonical" href="https://bing-chou.github.io/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8Akeystore%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/" />
-
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/manifest.json">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-
-
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-
-<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
-
-
+<link href="/sass/main.min.39a3e01cac9473be1356f3572fcfe34b2e363efabad244a99a40f28a812c837e.css" rel="stylesheet">
 
 
 
 <meta property="og:title" content="以太坊Keystore基本原理" />
 <meta property="og:description" content="交易签名 非对称加密中会涉及到私钥和公钥的概念。我们这里称私钥为PrivKey，公钥为PubKey，需要验证的消息是message，签名为si" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://bing-chou.github.io/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8Akeystore%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/" />
-
-
-
-<meta property="article:published_time" content="2018-07-23T17:53:18&#43;08:00"/>
-
-<meta property="article:modified_time" content="2018-07-23T17:53:18&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="og:url" content="https://bing-chou.github.io/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8Akeystore%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2018-07-23T17:53:18&#43;08:00" />
+<meta property="article:modified_time" content="2018-07-23T17:53:18&#43;08:00" />
 
 <meta itemprop="name" content="以太坊Keystore基本原理">
-<meta itemprop="description" content="交易签名 非对称加密中会涉及到私钥和公钥的概念。我们这里称私钥为PrivKey，公钥为PubKey，需要验证的消息是message，签名为si">
-
-
-<meta itemprop="datePublished" content="2018-07-23T17:53:18&#43;08:00" />
+<meta itemprop="description" content="交易签名 非对称加密中会涉及到私钥和公钥的概念。我们这里称私钥为PrivKey，公钥为PubKey，需要验证的消息是message，签名为si"><meta itemprop="datePublished" content="2018-07-23T17:53:18&#43;08:00" />
 <meta itemprop="dateModified" content="2018-07-23T17:53:18&#43;08:00" />
-<meta itemprop="wordCount" content="806">
-
-
-
-<meta itemprop="keywords" content="以太坊," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="wordCount" content="838">
+<meta itemprop="keywords" content="以太坊," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="以太坊Keystore基本原理"/>
 <meta name="twitter:description" content="交易签名 非对称加密中会涉及到私钥和公钥的概念。我们这里称私钥为PrivKey，公钥为PubKey，需要验证的消息是message，签名为si"/>
 
@@ -116,12 +85,21 @@
         <li class="mobile-menu-item">标签</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Bing</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -134,6 +112,7 @@
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -147,116 +126,124 @@
       <div class="post-meta">
         <span class="post-time"> 2018-07-23 </span>
         
-        
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
     </header>
 
-    
-    
-<div class="post-toc" id="post-toc">
+    <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
-  
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#交易签名">交易签名</a></li>
-<li><a href="#keystore">Keystore</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#交易签名">交易签名</a></li>
+    <li><a href="#keystore">Keystore</a></li>
+  </ul>
 </nav>
   </div>
 </div>
-
-    
-    
-
-    
     <div class="post-content">
-      
-
-<h2 id="交易签名">交易签名</h2>
-
+      <h2 id="交易签名">交易签名</h2>
 <p>非对称加密中会涉及到私钥和公钥的概念。我们这里称私钥为PrivKey，公钥为PubKey，需要验证的消息是message，签名为sign（由PrivKey+message得到）</p>
-
 <p>A向B发送消息message，B收到message，但是B怎么确认消息是A发出，并且没有经过篡改呢？利用签名就可以达到这个目的。假设A发生消息时，同时发送公钥和签名，也就是message+PubKey+sign。B接收到message+PubKey+sign，发现由message+PubKey推导的签名结果和收到的sign一致，由此确认message未经篡改。那如何知道是否是A发送呢？答案是在PubKey本身包含A的地址信息。</p>
-
 <p>更进一步，已知算法，私钥可以直接推导出公钥，公钥可以推导出账户地址，即PrivKey==&gt;PubKey==&gt;Address。</p>
-
 <p>当以太坊广播一笔交易时，大致就使用了上面的原理。所以保存好私钥PrivKey至关重要。</p>
-
 <h2 id="keystore">Keystore</h2>
-
 <p>初次使用以太坊钱包会发现，每次交易都会要求输入密码passphrase。这是由于以太坊使用了Keystore机制，本地只保存了Keystore，并未保存私钥PrivKey。当发起交易时，需要根据KeyStore+passphrase实时计算PrivKey来发起交易。这样的话，即使Keystore不小心被盗，我们的账户也能保证一定的安全。</p>
-
 <p>借助于<a href="https://github.com/ethereumjs/keythereum">keythereum</a>库，可以帮助我们进一步理解Keystore和PrivKey的关系</p>
-
-<pre><code class="language-js">var keythereum = require(&quot;keythereum&quot;);
-var secp256k1=require(&quot;secp256k1&quot;);
-var datadir = &quot;/Users/bing/test/data&quot;; //此处填入你的datadir
-var address = &quot;0x008aeeda4d805471df9b2a5b0f38a0c3bcba786b&quot;; //此处填入你的账户地址 
-var keyObject = keythereum.importFromFile(address, datadir); 
-var password = &quot;xxx&quot;; //密码passphrase
-var privateKey = keythereum.recover(password, keyObject); //获得私钥
-console.log(privateKey.toString('hex'));
-//var publicKey = secp256k1.publicKeyCreate(privateKey, false).slice(1);
-var publicKey1 = secp256k1.publicKeyCreate(privateKey, false); //获得公钥
-console.log(publicKey1.toString('hex'))
-</code></pre>
-
-<pre><code class="language-json">// keystore文件大概长这样
-{
-  address: &quot;008aeeda4d805471df9b2a5b0f38a0c3bcba786b&quot;,
-  Crypto: {
-    cipher: &quot;aes-128-ctr&quot;,
-    ciphertext: &quot;5318b4d5bcd28de64ee5559e671353e16f075ecae9f99c7a79a38af5f869aa46&quot;,
-    cipherparams: {
-      iv: &quot;6087dab2f9fdbbfaddc31a909735c1e6&quot;
-    },
-    mac: &quot;517ead924a9d0dc3124507e3393d175ce3ff7c1e96529c6c555ce9e51205e9b2&quot;,
-    kdf: &quot;pbkdf2&quot;,
-    kdfparams: {
-      c: 262144,
-      dklen: 32,
-      prf: &quot;hmac-sha256&quot;,
-      salt: &quot;ae3cd4e7013836a3df6bd7241b12db061dbe2c6785853cce422d148a624ce0bd&quot;
-    }
-  },
-  id: &quot;e13b209c-3b2f-4327-bab0-3bef2e51630d&quot;,
-  version: 3
-}
-</code></pre>
-
-<hr />
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">keythereum</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;keythereum&#34;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">secp256k1</span><span class="o">=</span><span class="nx">require</span><span class="p">(</span><span class="s2">&#34;secp256k1&#34;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">datadir</span> <span class="o">=</span> <span class="s2">&#34;/Users/bing/test/data&#34;</span><span class="p">;</span> <span class="c1">//此处填入你的datadir
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">address</span> <span class="o">=</span> <span class="s2">&#34;0x008aeeda4d805471df9b2a5b0f38a0c3bcba786b&#34;</span><span class="p">;</span> <span class="c1">//此处填入你的账户地址 
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">keyObject</span> <span class="o">=</span> <span class="nx">keythereum</span><span class="p">.</span><span class="nx">importFromFile</span><span class="p">(</span><span class="nx">address</span><span class="p">,</span> <span class="nx">datadir</span><span class="p">);</span> 
+<span class="kd">var</span> <span class="nx">password</span> <span class="o">=</span> <span class="s2">&#34;xxx&#34;</span><span class="p">;</span> <span class="c1">//密码passphrase
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">privateKey</span> <span class="o">=</span> <span class="nx">keythereum</span><span class="p">.</span><span class="nx">recover</span><span class="p">(</span><span class="nx">password</span><span class="p">,</span> <span class="nx">keyObject</span><span class="p">);</span> <span class="c1">//获得私钥
+</span><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">privateKey</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="s1">&#39;hex&#39;</span><span class="p">));</span>
+<span class="c1">//var publicKey = secp256k1.publicKeyCreate(privateKey, false).slice(1);
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">publicKey1</span> <span class="o">=</span> <span class="nx">secp256k1</span><span class="p">.</span><span class="nx">publicKeyCreate</span><span class="p">(</span><span class="nx">privateKey</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span> <span class="c1">//获得公钥
+</span><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">publicKey1</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="s1">&#39;hex&#39;</span><span class="p">))</span>
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="err">//</span> <span class="err">keystore文件大概长这样</span>
+<span class="p">{</span>
+  <span class="err">address:</span> <span class="nt">&#34;008aeeda4d805471df9b2a5b0f38a0c3bcba786b&#34;</span><span class="p">,</span>
+  <span class="err">Crypto:</span> <span class="err">{</span>
+    <span class="err">cipher:</span> <span class="nt">&#34;aes-128-ctr&#34;</span><span class="p">,</span>
+    <span class="err">ciphertext:</span> <span class="nt">&#34;5318b4d5bcd28de64ee5559e671353e16f075ecae9f99c7a79a38af5f869aa46&#34;</span><span class="p">,</span>
+    <span class="err">cipherparams:</span> <span class="err">{</span>
+      <span class="err">iv:</span> <span class="nt">&#34;6087dab2f9fdbbfaddc31a909735c1e6&#34;</span>
+    <span class="p">}</span><span class="err">,</span>
+    <span class="err">mac:</span> <span class="s2">&#34;517ead924a9d0dc3124507e3393d175ce3ff7c1e96529c6c555ce9e51205e9b2&#34;</span><span class="err">,</span>
+    <span class="err">kdf:</span> <span class="s2">&#34;pbkdf2&#34;</span><span class="err">,</span>
+    <span class="err">kdfparams:</span> <span class="p">{</span>
+      <span class="err">c:</span> <span class="err">262144,</span>
+      <span class="err">dklen:</span> <span class="err">32,</span>
+      <span class="err">prf:</span> <span class="nt">&#34;hmac-sha256&#34;</span><span class="p">,</span>
+      <span class="err">salt:</span> <span class="nt">&#34;ae3cd4e7013836a3df6bd7241b12db061dbe2c6785853cce422d148a624ce0bd&#34;</span>
+    <span class="p">}</span>
+  <span class="err">},</span>
+  <span class="err">id:</span> <span class="s2">&#34;e13b209c-3b2f-4327-bab0-3bef2e51630d&#34;</span><span class="err">,</span>
+  <span class="err">version:</span> <span class="mi">3</span>
+<span class="err">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><hr>
 <blockquote>
 <p>持续学习中，理解可能有误，敬请谅解</p>
-
+</blockquote>
+<blockquote>
 <p>版权所有，转载请注明来源</p>
 </blockquote>
 
     </div>
 
     
-    
-
-    
-    
-
-    <footer class="post-footer">
+<footer class="post-footer">
       <div class="post-tags">
-          
           <a href="/tags/%E4%BB%A5%E5%A4%AA%E5%9D%8A/">以太坊</a>
-          
-        </div>
-
-      
+          </div>
       <nav class="post-nav">
         
-        
-          <a class="next" href="/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E6%9E%B6%E6%9E%84/">
+        <a class="next" href="/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E6%9E%B6%E6%9E%84/">
             <span class="next-text nav-default">以太坊架构</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
@@ -288,19 +275,17 @@ console.log(publicKey1.toString('hex'))
 
   <div class="busuanzi-footer">
     <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
-    <span class="division">|</span>
+      <span class="division">|</span>
     <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
   </div>
 
   <span class="copyright-year">
     &copy; 
-    2018
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">Bing</span>
+    2018 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>Bing</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -308,23 +293,15 @@ console.log(publicKey1.toString('hex'))
     </div>
   </div>
   
-<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   
 
 
-<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
 
-<script id="baidu_analytics">
-  var _hmt = _hmt || [];
-  (function() {
-    if (window.location.hostname === 'localhost') return;
-    var hm = document.createElement("script"); hm.async = true;
-    hm.src = "https://hm.baidu.com/hm.js?3732599b0b9fcaff18c0c25a12a40ad6";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(hm, s);
-  })();
-</script>
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
 
 
 

@@ -16,72 +16,41 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Bing" />
-  <meta name="description" content="参考 区块链项目开发指南 京东链接 Your first Ethereum smart contract Building-Blockchain-Projects 准备工作 合约代码 该合约演示了文件所有权账本，记录了文件及文件拥有者对应关系，文件唯一性由其hash" />
-
-  <meta name="keywords" content="Bing, Ethereum, 以太坊, 区块链" />
+<meta name="author" content="Bing" /><meta name="description" content="参考 区块链项目开发指南 京东链接 Your first Ethereum smart contract Building-Blockchain-Projects 准备工作 合约代码 该合约演示了文件所有权账本，记录了文件及文件拥有者对应关系，文件唯一性由其hash" /><meta name="keywords" content="Bing, Ethereum, 以太坊, 区块链" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.42.1" />
+<meta name="generator" content="Hugo 0.82.0 with theme even" />
 
 
 <link rel="canonical" href="https://bing-chou.github.io/post/ethereum/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E9%83%A8%E7%BD%B2/" />
-
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/manifest.json">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-
-
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-
-<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
-
-
+<link href="/sass/main.min.39a3e01cac9473be1356f3572fcfe34b2e363efabad244a99a40f28a812c837e.css" rel="stylesheet">
 
 
 
 <meta property="og:title" content="智能合约部署" />
 <meta property="og:description" content="参考 区块链项目开发指南 京东链接 Your first Ethereum smart contract Building-Blockchain-Projects 准备工作 合约代码 该合约演示了文件所有权账本，记录了文件及文件拥有者对应关系，文件唯一性由其hash" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://bing-chou.github.io/post/ethereum/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E9%83%A8%E7%BD%B2/" />
-
-
-
-<meta property="article:published_time" content="2018-06-21T17:21:24&#43;08:00"/>
-
-<meta property="article:modified_time" content="2018-06-21T17:21:24&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="og:url" content="https://bing-chou.github.io/post/ethereum/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E9%83%A8%E7%BD%B2/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2018-06-21T17:21:24&#43;08:00" />
+<meta property="article:modified_time" content="2018-06-21T17:21:24&#43;08:00" />
 
 <meta itemprop="name" content="智能合约部署">
-<meta itemprop="description" content="参考 区块链项目开发指南 京东链接 Your first Ethereum smart contract Building-Blockchain-Projects 准备工作 合约代码 该合约演示了文件所有权账本，记录了文件及文件拥有者对应关系，文件唯一性由其hash">
-
-
-<meta itemprop="datePublished" content="2018-06-21T17:21:24&#43;08:00" />
+<meta itemprop="description" content="参考 区块链项目开发指南 京东链接 Your first Ethereum smart contract Building-Blockchain-Projects 准备工作 合约代码 该合约演示了文件所有权账本，记录了文件及文件拥有者对应关系，文件唯一性由其hash"><meta itemprop="datePublished" content="2018-06-21T17:21:24&#43;08:00" />
 <meta itemprop="dateModified" content="2018-06-21T17:21:24&#43;08:00" />
-<meta itemprop="wordCount" content="808">
-
-
-
-<meta itemprop="keywords" content="以太坊," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="wordCount" content="866">
+<meta itemprop="keywords" content="以太坊," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="智能合约部署"/>
 <meta name="twitter:description" content="参考 区块链项目开发指南 京东链接 Your first Ethereum smart contract Building-Blockchain-Projects 准备工作 合约代码 该合约演示了文件所有权账本，记录了文件及文件拥有者对应关系，文件唯一性由其hash"/>
 
@@ -116,12 +85,21 @@
         <li class="mobile-menu-item">标签</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Bing</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -134,6 +112,7 @@
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -147,205 +126,255 @@
       <div class="post-meta">
         <span class="post-time"> 2018-06-21 </span>
         
-        
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
     </header>
 
-    
-    
-<div class="post-toc" id="post-toc">
+    <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
-  
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#参考">参考</a></li>
-<li><a href="#准备工作">准备工作</a></li>
-<li><a href="#部署合约">部署合约</a></li>
-<li><a href="#使用合约">使用合约</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#参考">参考</a></li>
+        <li><a href="#准备工作">准备工作</a></li>
+        <li><a href="#部署合约">部署合约</a></li>
+        <li><a href="#使用合约">使用合约</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
   </div>
 </div>
-
-    
-    
-
-    
     <div class="post-content">
-      
-
-<h3 id="参考">参考</h3>
-
+      <h3 id="参考">参考</h3>
 <ul>
 <li><a href="https://item.jd.com/12284210.html">区块链项目开发指南 京东链接</a></li>
 <li><a href="http://www.ryzhak.com/practical-guide-to-ethereum-part-17/">Your first Ethereum smart contract</a></li>
 <li><a href="https://github.com/PacktPublishing/Building-Blockchain-Projects/tree/master/Chapter04">Building-Blockchain-Projects</a></li>
 </ul>
-
 <h3 id="准备工作">准备工作</h3>
-
 <ul>
 <li>合约代码
-
 <ul>
 <li>该合约演示了文件所有权账本，记录了文件及文件拥有者对应关系，文件唯一性由其hash值确定</li>
-</ul></li>
 </ul>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">//proof.sol
+</span><span class="c1"></span><span class="nx">contract</span> <span class="nx">Proof</span>
+<span class="p">{</span>
+    <span class="nx">struct</span> <span class="nx">FileDetails</span>
+    <span class="p">{</span>
+        <span class="nx">uint</span> <span class="nx">timestamp</span><span class="p">;</span>
+        <span class="nx">string</span> <span class="nx">owner</span><span class="p">;</span>
+    <span class="p">}</span>
 
-<pre><code class="language-js">//proof.sol
-contract Proof
-{
-    struct FileDetails
-    {
-        uint timestamp;
-        string owner;
-    }
+    <span class="nx">mapping</span> <span class="p">(</span><span class="nx">string</span> <span class="p">=&gt;</span> <span class="nx">FileDetails</span><span class="p">)</span> <span class="nx">files</span><span class="p">;</span>
 
-    mapping (string =&gt; FileDetails) files;
+    <span class="nx">event</span> <span class="nx">logFileAddedStatus</span><span class="p">(</span><span class="nx">bool</span> <span class="nx">status</span><span class="p">,</span> <span class="nx">uint</span> <span class="nx">timestamp</span><span class="p">,</span> <span class="nx">string</span> <span class="nx">owner</span><span class="p">,</span> <span class="nx">string</span> <span class="nx">fileHash</span><span class="p">);</span>
 
-    event logFileAddedStatus(bool status, uint timestamp, string owner, string fileHash);
+    <span class="c1">// to store the owner of file at the block timestamp
+</span><span class="c1"></span>    <span class="kd">function</span> <span class="nx">set</span><span class="p">(</span><span class="nx">string</span> <span class="nx">owner</span><span class="p">,</span> <span class="nx">string</span> <span class="nx">fileHash</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// if filehash not exists then set it
+</span><span class="c1"></span>        <span class="k">if</span><span class="p">(</span><span class="nx">files</span><span class="p">[</span><span class="nx">fileHash</span><span class="p">].</span><span class="nx">timestamp</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="nx">files</span><span class="p">[</span><span class="nx">fileHash</span><span class="p">]</span> <span class="o">=</span> <span class="nx">FileDetails</span><span class="p">(</span><span class="nx">block</span><span class="p">.</span><span class="nx">timestamp</span><span class="p">,</span> <span class="nx">owner</span><span class="p">);</span>
+            <span class="c1">// we are triggering an event so that the frontend of our app knows
+</span><span class="c1"></span>            <span class="c1">// that the file&#39;s existence and ownership details have been stored
+</span><span class="c1"></span>             <span class="nx">logFileAddedStatus</span><span class="p">(</span><span class="kc">true</span><span class="p">,</span> <span class="nx">block</span><span class="p">.</span><span class="nx">timestamp</span><span class="p">,</span> <span class="nx">owner</span><span class="p">,</span> <span class="nx">fileHash</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+            <span class="c1">// file&#39;s details has already been stored earlier
+</span><span class="c1"></span>            <span class="nx">logFileAddedStatus</span><span class="p">(</span><span class="kc">false</span><span class="p">,</span> <span class="nx">block</span><span class="p">.</span><span class="nx">timestamp</span><span class="p">,</span> <span class="nx">owner</span><span class="p">,</span> <span class="nx">fileHash</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
 
-    // to store the owner of file at the block timestamp
-    function set(string owner, string fileHash)
-    {
-        // if filehash not exists then set it
-        if(files[fileHash].timestamp == 0)
-        {
-            files[fileHash] = FileDetails(block.timestamp, owner);
-            // we are triggering an event so that the frontend of our app knows
-            // that the file's existence and ownership details have been stored
-             logFileAddedStatus(true, block.timestamp, owner, fileHash);
-        }
-        else
-        {
-            // file's details has already been stored earlier
-            logFileAddedStatus(false, block.timestamp, owner, fileHash);
-        }
-    }
+    <span class="c1">// get file information
+</span><span class="c1"></span>    <span class="kd">function</span> <span class="nx">get</span><span class="p">(</span><span class="nx">string</span> <span class="nx">fileHash</span><span class="p">)</span> <span class="nx">returns</span> <span class="p">(</span><span class="nx">uint</span> <span class="nx">timestamp</span><span class="p">,</span> <span class="nx">string</span> <span class="nx">owner</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="p">(</span><span class="nx">files</span><span class="p">[</span><span class="nx">fileHash</span><span class="p">].</span><span class="nx">timestamp</span><span class="p">,</span> <span class="nx">files</span><span class="p">[</span><span class="nx">fileHash</span><span class="p">].</span><span class="nx">owner</span><span class="p">);</span>
+    <span class="p">}</span>
 
-    // get file information
-    function get(string fileHash) returns (uint timestamp, string owner)
-    {
-        return (files[fileHash].timestamp, files[fileHash].owner);
-    }
-
-}
-</code></pre>
-
-<ul>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
 <li>编译
-
 <ul>
 <li>打开solidity在线编译工具 <a href="https://remix.ethereum.org/">remix</a>，新建文件，贴入以上代码</li>
 <li>点击Start to compile</li>
 <li>编译完成后，点击Details获得合约部署代码WEB3DEPLOY，如下</li>
-</ul></li>
 </ul>
-
-<pre><code class="language-js">var proofContract = web3.eth.contract([{&quot;constant&quot;:false,&quot;inputs&quot;:[{&quot;name&quot;:&quot;fileHash&quot;,&quot;type&quot;:&quot;string&quot;}],&quot;name&quot;:&quot;get&quot;,&quot;outputs&quot;:[{&quot;name&quot;:&quot;timestamp&quot;,&quot;type&quot;:&quot;uint256&quot;},{&quot;name&quot;:&quot;owner&quot;,&quot;type&quot;:&quot;string&quot;}],&quot;payable&quot;:false,&quot;stateMutability&quot;:&quot;nonpayable&quot;,&quot;type&quot;:&quot;function&quot;},{&quot;constant&quot;:false,&quot;inputs&quot;:[{&quot;name&quot;:&quot;owner&quot;,&quot;type&quot;:&quot;string&quot;},{&quot;name&quot;:&quot;fileHash&quot;,&quot;type&quot;:&quot;string&quot;}],&quot;name&quot;:&quot;set&quot;,&quot;outputs&quot;:[],&quot;payable&quot;:false,&quot;stateMutability&quot;:&quot;nonpayable&quot;,&quot;type&quot;:&quot;function&quot;},{&quot;anonymous&quot;:false,&quot;inputs&quot;:[{&quot;indexed&quot;:false,&quot;name&quot;:&quot;status&quot;,&quot;type&quot;:&quot;bool&quot;},{&quot;indexed&quot;:false,&quot;name&quot;:&quot;timestamp&quot;,&quot;type&quot;:&quot;uint256&quot;},{&quot;indexed&quot;:false,&quot;name&quot;:&quot;owner&quot;,&quot;type&quot;:&quot;string&quot;},{&quot;indexed&quot;:false,&quot;name&quot;:&quot;fileHash&quot;,&quot;type&quot;:&quot;string&quot;}],&quot;name&quot;:&quot;logFileAddedStatus&quot;,&quot;type&quot;:&quot;event&quot;}]);
-var proof = proofContract.new(
-   {
-     from: web3.eth.accounts[0],
-     data: '0x608060405234801561001057600080fd5b506107a6806100206000396000f30060806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063693ec85e14610051578063e942b5161461013a575b600080fd5b34801561005d57600080fd5b506100b8600480360381019080803590602001908201803590602001908080601f01602080910402602001604051908101604052809392919081815260200183838082843782019150505050505091929192905050506101e9565b6040518083815260200180602001828103825283818151815260200191508051906020019080838360005b838110156100fe5780820151818401526020810190506100e3565b50505050905090810190601f16801561012b5780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b34801561014657600080fd5b506101e7600480360381019080803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509192919290803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050919291929050505061036f565b005b600060606000836040518082805190602001908083835b6020831015156102255780518252602082019150602081019050602083039250610200565b6001836020036101000a0380198251168184511680821785525050505050509050019150509081526020016040518091039020600001546000846040518082805190602001908083835b602083101515610294578051825260208201915060208101905060208303925061026f565b6001836020036101000a0380198251168184511680821785525050505050509050019150509081526020016040518091039020600101808054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561035f5780601f106103345761010080835404028352916020019161035f565b820191906000526020600020905b81548152906001019060200180831161034257829003601f168201915b5050505050905091509150915091565b600080826040518082805190602001908083835b6020831015156103a85780518252602082019150602081019050602083039250610383565b6001836020036101000a03801982511681845116808217855250505050505090500191505090815260200160405180910390206000015414156105b2576040805190810160405280428152602001838152506000826040518082805190602001908083835b602083101515610432578051825260208201915060208101905060208303925061040d565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902060008201518160000155602082015181600101908051906020019061048b9291906106d5565b509050507f0d3bbc3c02da6ed436712ca1a0f626f1269df703a105f034e4637c7b10fb7ba5600142848460405180851515151581526020018481526020018060200180602001838103835285818151815260200191508051906020019080838360005b838110156105095780820151818401526020810190506104ee565b50505050905090810190601f1680156105365780820380516001836020036101000a031916815260200191505b50838103825284818151815260200191508051906020019080838360005b8381101561056f578082015181840152602081019050610554565b50505050905090810190601f16801561059c5780820380516001836020036101000a031916815260200191505b50965050505050505060405180910390a16106d1565b7f0d3bbc3c02da6ed436712ca1a0f626f1269df703a105f034e4637c7b10fb7ba5600042848460405180851515151581526020018481526020018060200180602001838103835285818151815260200191508051906020019080838360005b8381101561062c578082015181840152602081019050610611565b50505050905090810190601f1680156106595780820380516001836020036101000a031916815260200191505b50838103825284818151815260200191508051906020019080838360005b83811015610692578082015181840152602081019050610677565b50505050905090810190601f1680156106bf5780820380516001836020036101000a031916815260200191505b50965050505050505060405180910390a15b5050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061071657805160ff1916838001178555610744565b82800160010185558215610744579182015b82811115610743578251825591602001919060010190610728565b5b5090506107519190610755565b5090565b61077791905b8082111561077357600081600090555060010161075b565b5090565b905600a165627a7a723058200baa1bec93ab158dfff9d2175f4f0dc385d4a1d0d2be98e2eb9321011b1757540029',
-     gas: '4700000'
-   }, function (e, contract){
-    console.log(e, contract);
-    if (typeof contract.address !== 'undefined') {
-         console.log('Contract mined! address: ' + contract.address + ' transactionHash: ' + contract.transactionHash);
-    }
- })
-</code></pre>
-
-<h3 id="部署合约">部署合约</h3>
-
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">proofContract</span> <span class="o">=</span> <span class="nx">web3</span><span class="p">.</span><span class="nx">eth</span><span class="p">.</span><span class="nx">contract</span><span class="p">([{</span><span class="s2">&#34;constant&#34;</span><span class="o">:</span><span class="kc">false</span><span class="p">,</span><span class="s2">&#34;inputs&#34;</span><span class="o">:</span><span class="p">[{</span><span class="s2">&#34;name&#34;</span><span class="o">:</span><span class="s2">&#34;fileHash&#34;</span><span class="p">,</span><span class="s2">&#34;type&#34;</span><span class="o">:</span><span class="s2">&#34;string&#34;</span><span class="p">}],</span><span class="s2">&#34;name&#34;</span><span class="o">:</span><span class="s2">&#34;get&#34;</span><span class="p">,</span><span class="s2">&#34;outputs&#34;</span><span class="o">:</span><span class="p">[{</span><span class="s2">&#34;name&#34;</span><span class="o">:</span><span class="s2">&#34;timestamp&#34;</span><span class="p">,</span><span class="s2">&#34;type&#34;</span><span class="o">:</span><span class="s2">&#34;uint256&#34;</span><span class="p">},{</span><span class="s2">&#34;name&#34;</span><span class="o">:</span><span class="s2">&#34;owner&#34;</span><span class="p">,</span><span class="s2">&#34;type&#34;</span><span class="o">:</span><span class="s2">&#34;string&#34;</span><span class="p">}],</span><span class="s2">&#34;payable&#34;</span><span class="o">:</span><span class="kc">false</span><span class="p">,</span><span class="s2">&#34;stateMutability&#34;</span><span class="o">:</span><span class="s2">&#34;nonpayable&#34;</span><span class="p">,</span><span class="s2">&#34;type&#34;</span><span class="o">:</span><span class="s2">&#34;function&#34;</span><span class="p">},{</span><span class="s2">&#34;constant&#34;</span><span class="o">:</span><span class="kc">false</span><span class="p">,</span><span class="s2">&#34;inputs&#34;</span><span class="o">:</span><span class="p">[{</span><span class="s2">&#34;name&#34;</span><span class="o">:</span><span class="s2">&#34;owner&#34;</span><span class="p">,</span><span class="s2">&#34;type&#34;</span><span class="o">:</span><span class="s2">&#34;string&#34;</span><span class="p">},{</span><span class="s2">&#34;name&#34;</span><span class="o">:</span><span class="s2">&#34;fileHash&#34;</span><span class="p">,</span><span class="s2">&#34;type&#34;</span><span class="o">:</span><span class="s2">&#34;string&#34;</span><span class="p">}],</span><span class="s2">&#34;name&#34;</span><span class="o">:</span><span class="s2">&#34;set&#34;</span><span class="p">,</span><span class="s2">&#34;outputs&#34;</span><span class="o">:</span><span class="p">[],</span><span class="s2">&#34;payable&#34;</span><span class="o">:</span><span class="kc">false</span><span class="p">,</span><span class="s2">&#34;stateMutability&#34;</span><span class="o">:</span><span class="s2">&#34;nonpayable&#34;</span><span class="p">,</span><span class="s2">&#34;type&#34;</span><span class="o">:</span><span class="s2">&#34;function&#34;</span><span class="p">},{</span><span class="s2">&#34;anonymous&#34;</span><span class="o">:</span><span class="kc">false</span><span class="p">,</span><span class="s2">&#34;inputs&#34;</span><span class="o">:</span><span class="p">[{</span><span class="s2">&#34;indexed&#34;</span><span class="o">:</span><span class="kc">false</span><span class="p">,</span><span class="s2">&#34;name&#34;</span><span class="o">:</span><span class="s2">&#34;status&#34;</span><span class="p">,</span><span class="s2">&#34;type&#34;</span><span class="o">:</span><span class="s2">&#34;bool&#34;</span><span class="p">},{</span><span class="s2">&#34;indexed&#34;</span><span class="o">:</span><span class="kc">false</span><span class="p">,</span><span class="s2">&#34;name&#34;</span><span class="o">:</span><span class="s2">&#34;timestamp&#34;</span><span class="p">,</span><span class="s2">&#34;type&#34;</span><span class="o">:</span><span class="s2">&#34;uint256&#34;</span><span class="p">},{</span><span class="s2">&#34;indexed&#34;</span><span class="o">:</span><span class="kc">false</span><span class="p">,</span><span class="s2">&#34;name&#34;</span><span class="o">:</span><span class="s2">&#34;owner&#34;</span><span class="p">,</span><span class="s2">&#34;type&#34;</span><span class="o">:</span><span class="s2">&#34;string&#34;</span><span class="p">},{</span><span class="s2">&#34;indexed&#34;</span><span class="o">:</span><span class="kc">false</span><span class="p">,</span><span class="s2">&#34;name&#34;</span><span class="o">:</span><span class="s2">&#34;fileHash&#34;</span><span class="p">,</span><span class="s2">&#34;type&#34;</span><span class="o">:</span><span class="s2">&#34;string&#34;</span><span class="p">}],</span><span class="s2">&#34;name&#34;</span><span class="o">:</span><span class="s2">&#34;logFileAddedStatus&#34;</span><span class="p">,</span><span class="s2">&#34;type&#34;</span><span class="o">:</span><span class="s2">&#34;event&#34;</span><span class="p">}]);</span>
+<span class="kd">var</span> <span class="nx">proof</span> <span class="o">=</span> <span class="nx">proofContract</span><span class="p">.</span><span class="k">new</span><span class="p">(</span>
+   <span class="p">{</span>
+     <span class="nx">from</span><span class="o">:</span> <span class="nx">web3</span><span class="p">.</span><span class="nx">eth</span><span class="p">.</span><span class="nx">accounts</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+     <span class="nx">data</span><span class="o">:</span> <span class="s1">&#39;0x608060405234801561001057600080fd5b506107a6806100206000396000f30060806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063693ec85e14610051578063e942b5161461013a575b600080fd5b34801561005d57600080fd5b506100b8600480360381019080803590602001908201803590602001908080601f01602080910402602001604051908101604052809392919081815260200183838082843782019150505050505091929192905050506101e9565b6040518083815260200180602001828103825283818151815260200191508051906020019080838360005b838110156100fe5780820151818401526020810190506100e3565b50505050905090810190601f16801561012b5780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b34801561014657600080fd5b506101e7600480360381019080803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509192919290803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050919291929050505061036f565b005b600060606000836040518082805190602001908083835b6020831015156102255780518252602082019150602081019050602083039250610200565b6001836020036101000a0380198251168184511680821785525050505050509050019150509081526020016040518091039020600001546000846040518082805190602001908083835b602083101515610294578051825260208201915060208101905060208303925061026f565b6001836020036101000a0380198251168184511680821785525050505050509050019150509081526020016040518091039020600101808054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561035f5780601f106103345761010080835404028352916020019161035f565b820191906000526020600020905b81548152906001019060200180831161034257829003601f168201915b5050505050905091509150915091565b600080826040518082805190602001908083835b6020831015156103a85780518252602082019150602081019050602083039250610383565b6001836020036101000a03801982511681845116808217855250505050505090500191505090815260200160405180910390206000015414156105b2576040805190810160405280428152602001838152506000826040518082805190602001908083835b602083101515610432578051825260208201915060208101905060208303925061040d565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902060008201518160000155602082015181600101908051906020019061048b9291906106d5565b509050507f0d3bbc3c02da6ed436712ca1a0f626f1269df703a105f034e4637c7b10fb7ba5600142848460405180851515151581526020018481526020018060200180602001838103835285818151815260200191508051906020019080838360005b838110156105095780820151818401526020810190506104ee565b50505050905090810190601f1680156105365780820380516001836020036101000a031916815260200191505b50838103825284818151815260200191508051906020019080838360005b8381101561056f578082015181840152602081019050610554565b50505050905090810190601f16801561059c5780820380516001836020036101000a031916815260200191505b50965050505050505060405180910390a16106d1565b7f0d3bbc3c02da6ed436712ca1a0f626f1269df703a105f034e4637c7b10fb7ba5600042848460405180851515151581526020018481526020018060200180602001838103835285818151815260200191508051906020019080838360005b8381101561062c578082015181840152602081019050610611565b50505050905090810190601f1680156106595780820380516001836020036101000a031916815260200191505b50838103825284818151815260200191508051906020019080838360005b83811015610692578082015181840152602081019050610677565b50505050905090810190601f1680156106bf5780820380516001836020036101000a031916815260200191505b50965050505050505060405180910390a15b5050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061071657805160ff1916838001178555610744565b82800160010185558215610744579182015b82811115610743578251825591602001919060010190610728565b5b5090506107519190610755565b5090565b61077791905b8082111561077357600081600090555060010161075b565b5090565b905600a165627a7a723058200baa1bec93ab158dfff9d2175f4f0dc385d4a1d0d2be98e2eb9321011b1757540029&#39;</span><span class="p">,</span>
+     <span class="nx">gas</span><span class="o">:</span> <span class="s1">&#39;4700000&#39;</span>
+   <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">,</span> <span class="nx">contract</span><span class="p">){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span> <span class="nx">contract</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">contract</span><span class="p">.</span><span class="nx">address</span> <span class="o">!==</span> <span class="s1">&#39;undefined&#39;</span><span class="p">)</span> <span class="p">{</span>
+         <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Contract mined! address: &#39;</span> <span class="o">+</span> <span class="nx">contract</span><span class="p">.</span><span class="nx">address</span> <span class="o">+</span> <span class="s1">&#39; transactionHash: &#39;</span> <span class="o">+</span> <span class="nx">contract</span><span class="p">.</span><span class="nx">transactionHash</span><span class="p">);</span>
+    <span class="p">}</span>
+ <span class="p">})</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="部署合约">部署合约</h3>
 <ul>
 <li>启动console，并开启挖矿，解锁账户（需要输入密码），启用rpc服务</li>
 </ul>
-
-<pre><code class="language-sh">./geth --datadir data --mine --minerthreads=1 --rpc --unlock=0
-</code></pre>
-
-<ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">./geth --datadir data --mine --minerthreads<span class="o">=</span><span class="m">1</span> --rpc --unlock<span class="o">=</span><span class="m">0</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
 <li>打开另外一个终端，连接到上一步的console</li>
 </ul>
-
-<pre><code class="language-sh">./geth attach ipc:data/geth.ipc
-</code></pre>
-
-<ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">./geth attach ipc:data/geth.ipc
+</code></pre></td></tr></table>
+</div>
+</div><ul>
 <li>在第2个终端，即attach终端的js console，输入合约编译后的代码，回车。忽略null，undefined提示，合约被提交，等待合约被挖出</li>
 <li>按照之前的配置difficulty=40000，1秒钟之内合约就会确认，消息如下。 获得的合约地址为0x0ea09543aff64c317ba2f103156591a0a9e4b2f4，以下用${ContractAddr}替代</li>
 </ul>
-
-<pre><code>Contract mined! address: 0x0ea09543aff64c317ba2f103156591a0a9e4b2f4 transactionHash: 0x7d3eb0d8ae1a12efb644ca85076d690fa7a8802161d9efc8eadff21790baf1e1
-</code></pre>
-
-<h3 id="使用合约">使用合约</h3>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Contract mined! address: 0x0ea09543aff64c317ba2f103156591a0a9e4b2f4 transactionHash: 0x7d3eb0d8ae1a12efb644ca85076d690fa7a8802161d9efc8eadff21790baf1e1
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="使用合约">使用合约</h3>
 <ul>
 <li>下载示例代码 <a href="https://github.com/PacktPublishing/Building-Blockchain-Projects/tree/master/Chapter04">Building-Blockchain-Projects</a>，代码用nodejs编写，需要自己学习搭建nodejs环境
-
 <ul>
 <li>修改Chapter04/Final/app.js文件，将下面一行的合约地址替换为上面得到的地址</li>
 <li>参考下面代码运行nodejs项目</li>
 <li>打开<a href="http://localhost:8080/">http://localhost:8080/</a>，可以看到页面，尝试进行录入，查询操作</li>
-</ul></li>
 </ul>
-
-<pre><code class="language-js">var proof = proofContract.at(&quot;${ContractAddr}&quot;);
-</code></pre>
-
-<pre><code class="language-sh">git clone https://github.com/PacktPublishing/Building-Blockchain-Projects.git
-cd Building-Blockchain-Projects/Chapter04/Final
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">proof</span> <span class="o">=</span> <span class="nx">proofContract</span><span class="p">.</span><span class="nx">at</span><span class="p">(</span><span class="s2">&#34;${ContractAddr}&#34;</span><span class="p">);</span>
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">git clone https://github.com/PacktPublishing/Building-Blockchain-Projects.git
+<span class="nb">cd</span> Building-Blockchain-Projects/Chapter04/Final
 npm install
 node app.js
-</code></pre>
-
-<ul>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
 <li>操作完成后，关闭所有终端</li>
 </ul>
-
-<hr />
-
+<hr>
 <blockquote>
 <p>持续学习中，理解可能有误，敬请谅解</p>
-
+</blockquote>
+<blockquote>
 <p>版权所有，转载请注明来源</p>
 </blockquote>
 
     </div>
 
     
-    
-
-    
-    
-
-    <footer class="post-footer">
+<footer class="post-footer">
       <div class="post-tags">
-          
           <a href="/tags/%E4%BB%A5%E5%A4%AA%E5%9D%8A/">以太坊</a>
-          
-        </div>
-
-      
+          </div>
       <nav class="post-nav">
-        
-          <a class="prev" href="/post/ethereum/%E4%BB%8E%E8%B4%A6%E5%8F%B7%E5%91%BD%E4%BB%A4%E5%BC%80%E5%A7%8B%E7%9A%84%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/">
+        <a class="prev" href="/post/ethereum/%E4%BB%8E%E8%B4%A6%E5%8F%B7%E5%91%BD%E4%BB%A4%E5%BC%80%E5%A7%8B%E7%9A%84%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/">
             <i class="iconfont icon-left"></i>
             <span class="prev-text nav-default">从账号命令开始的源码分析</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
-        
-          <a class="next" href="/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E7%A7%81%E6%9C%89%E9%93%BE%E6%90%AD%E5%BB%BA%E5%8F%8A%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
+        <a class="next" href="/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E7%A7%81%E6%9C%89%E9%93%BE%E6%90%AD%E5%BB%BA%E5%8F%8A%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
             <span class="next-text nav-default">以太坊私有链搭建及基本操作</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
@@ -377,19 +406,17 @@ node app.js
 
   <div class="busuanzi-footer">
     <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
-    <span class="division">|</span>
+      <span class="division">|</span>
     <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
   </div>
 
   <span class="copyright-year">
     &copy; 
-    2018
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">Bing</span>
+    2018 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>Bing</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -397,23 +424,15 @@ node app.js
     </div>
   </div>
   
-<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   
 
 
-<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
 
-<script id="baidu_analytics">
-  var _hmt = _hmt || [];
-  (function() {
-    if (window.location.hostname === 'localhost') return;
-    var hm = document.createElement("script"); hm.async = true;
-    hm.src = "https://hm.baidu.com/hm.js?3732599b0b9fcaff18c0c25a12a40ad6";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(hm, s);
-  })();
-</script>
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
 
 
 

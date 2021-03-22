@@ -16,72 +16,41 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Bing" />
-  <meta name="description" content="引言 最好的以太坊架构介绍莫过于黄皮书和代码本身 Ethereum Yellow Paper go-ethereum 下面还列举了一些可能有帮助的文档 Ethereum Frontier Guide Ethereum Wiki 待续 架构总览 Lee Thomas 给出了一份很直观的图 图片来源" />
-
-  <meta name="keywords" content="Bing, Ethereum, 以太坊, 区块链" />
+<meta name="author" content="Bing" /><meta name="description" content="引言 最好的以太坊架构介绍莫过于黄皮书和代码本身 Ethereum Yellow Paper go-ethereum 下面还列举了一些可能有帮助的文档 Ethereum Frontier Guide Ethereum Wiki 待续 架构总览 Lee Thomas 给出了一份很直观的图 图片来源" /><meta name="keywords" content="Bing, Ethereum, 以太坊, 区块链" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.42.1" />
+<meta name="generator" content="Hugo 0.82.0 with theme even" />
 
 
 <link rel="canonical" href="https://bing-chou.github.io/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E6%9E%B6%E6%9E%84/" />
-
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/manifest.json">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-
-
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-
-<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
-
-
+<link href="/sass/main.min.39a3e01cac9473be1356f3572fcfe34b2e363efabad244a99a40f28a812c837e.css" rel="stylesheet">
 
 
 
 <meta property="og:title" content="以太坊架构" />
 <meta property="og:description" content="引言 最好的以太坊架构介绍莫过于黄皮书和代码本身 Ethereum Yellow Paper go-ethereum 下面还列举了一些可能有帮助的文档 Ethereum Frontier Guide Ethereum Wiki 待续 架构总览 Lee Thomas 给出了一份很直观的图 图片来源" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://bing-chou.github.io/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E6%9E%B6%E6%9E%84/" />
-
-
-
-<meta property="article:published_time" content="2018-06-22T19:19:57&#43;08:00"/>
-
-<meta property="article:modified_time" content="2018-06-22T19:19:57&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="og:url" content="https://bing-chou.github.io/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E6%9E%B6%E6%9E%84/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2018-06-22T19:19:57&#43;08:00" />
+<meta property="article:modified_time" content="2018-06-22T19:19:57&#43;08:00" />
 
 <meta itemprop="name" content="以太坊架构">
-<meta itemprop="description" content="引言 最好的以太坊架构介绍莫过于黄皮书和代码本身 Ethereum Yellow Paper go-ethereum 下面还列举了一些可能有帮助的文档 Ethereum Frontier Guide Ethereum Wiki 待续 架构总览 Lee Thomas 给出了一份很直观的图 图片来源">
-
-
-<meta itemprop="datePublished" content="2018-06-22T19:19:57&#43;08:00" />
+<meta itemprop="description" content="引言 最好的以太坊架构介绍莫过于黄皮书和代码本身 Ethereum Yellow Paper go-ethereum 下面还列举了一些可能有帮助的文档 Ethereum Frontier Guide Ethereum Wiki 待续 架构总览 Lee Thomas 给出了一份很直观的图 图片来源"><meta itemprop="datePublished" content="2018-06-22T19:19:57&#43;08:00" />
 <meta itemprop="dateModified" content="2018-06-22T19:19:57&#43;08:00" />
-<meta itemprop="wordCount" content="1330">
-
-
-
-<meta itemprop="keywords" content="以太坊," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="wordCount" content="1496">
+<meta itemprop="keywords" content="以太坊," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="以太坊架构"/>
 <meta name="twitter:description" content="引言 最好的以太坊架构介绍莫过于黄皮书和代码本身 Ethereum Yellow Paper go-ethereum 下面还列举了一些可能有帮助的文档 Ethereum Frontier Guide Ethereum Wiki 待续 架构总览 Lee Thomas 给出了一份很直观的图 图片来源"/>
 
@@ -116,12 +85,21 @@
         <li class="mobile-menu-item">标签</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Bing</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -134,6 +112,7 @@
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -147,294 +126,436 @@
       <div class="post-meta">
         <span class="post-time"> 2018-06-22 </span>
         
-        
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
     </header>
 
-    
-    
-<div class="post-toc" id="post-toc">
+    <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
-  
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#引言">引言</a></li>
-<li><a href="#架构总览">架构总览</a></li>
-<li><a href="#merkle-patricia-tree">Merkle Patricia Tree</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#引言">引言</a></li>
+        <li><a href="#架构总览">架构总览</a></li>
+        <li><a href="#merkle-patricia-tree">Merkle Patricia Tree</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
   </div>
 </div>
-
-    
-    
-
-    
     <div class="post-content">
-      
-
-<h3 id="引言">引言</h3>
-
+      <h3 id="引言">引言</h3>
 <ul>
 <li>最好的以太坊架构介绍莫过于黄皮书和代码本身
-
 <ul>
 <li><a href="https://ethereum.github.io/yellowpaper/paper.pdf">Ethereum Yellow Paper</a></li>
 <li><a href="https://github.com/ethereum/go-ethereum">go-ethereum</a></li>
-</ul></li>
+</ul>
+</li>
 <li>下面还列举了一些可能有帮助的文档
-
 <ul>
 <li><a href="https://ethereum.gitbooks.io/frontier-guide/content/index.html">Ethereum Frontier Guide</a></li>
 <li><a href="https://github.com/ethereum/wiki/wiki">Ethereum Wiki</a></li>
 <li>待续</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h3 id="架构总览">架构总览</h3>
-
 <ul>
 <li>Lee Thomas 给出了一份很直观的图</li>
 </ul>
-
-<p><img src="/images/ethereum/ethereum_arch.jpg" alt="架构图" />
+<p><img src="/images/ethereum/ethereum_arch.jpg" alt="架构图">
 <code>图片来源: https://ethereum.stackexchange.com/questions/268/ethereum-block-architecture</code></p>
-
 <ul>
 <li>数据存储</li>
 </ul>
-
 <p>以太坊使用leveldb存储数据，block串起来形成chain，每个block由header+body组成，body中主要包含了交易信息（from，to，value）。可以看到header非常轻量，字节数很少，body相对而言会重一些，具体看交易数</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">Header</span> <span class="kd">struct</span> <span class="p">{</span>
+	<span class="nx">ParentHash</span>  <span class="nx">common</span><span class="p">.</span><span class="nx">Hash</span>    <span class="s">`json:&#34;parentHash&#34;       gencodec:&#34;required&#34;`</span>
+	<span class="nx">UncleHash</span>   <span class="nx">common</span><span class="p">.</span><span class="nx">Hash</span>    <span class="s">`json:&#34;sha3Uncles&#34;       gencodec:&#34;required&#34;`</span>
+	<span class="nx">Coinbase</span>    <span class="nx">common</span><span class="p">.</span><span class="nx">Address</span> <span class="s">`json:&#34;miner&#34;            gencodec:&#34;required&#34;`</span>
+	<span class="nx">Root</span>        <span class="nx">common</span><span class="p">.</span><span class="nx">Hash</span>    <span class="s">`json:&#34;stateRoot&#34;        gencodec:&#34;required&#34;`</span>
+	<span class="nx">TxHash</span>      <span class="nx">common</span><span class="p">.</span><span class="nx">Hash</span>    <span class="s">`json:&#34;transactionsRoot&#34; gencodec:&#34;required&#34;`</span>
+	<span class="nx">ReceiptHash</span> <span class="nx">common</span><span class="p">.</span><span class="nx">Hash</span>    <span class="s">`json:&#34;receiptsRoot&#34;     gencodec:&#34;required&#34;`</span>
+	<span class="nx">Bloom</span>       <span class="nx">Bloom</span>          <span class="s">`json:&#34;logsBloom&#34;        gencodec:&#34;required&#34;`</span>
+	<span class="nx">Difficulty</span>  <span class="o">*</span><span class="nx">big</span><span class="p">.</span><span class="nx">Int</span>       <span class="s">`json:&#34;difficulty&#34;       gencodec:&#34;required&#34;`</span>
+	<span class="nx">Number</span>      <span class="o">*</span><span class="nx">big</span><span class="p">.</span><span class="nx">Int</span>       <span class="s">`json:&#34;number&#34;           gencodec:&#34;required&#34;`</span>
+	<span class="nx">GasLimit</span>    <span class="kt">uint64</span>         <span class="s">`json:&#34;gasLimit&#34;         gencodec:&#34;required&#34;`</span>
+	<span class="nx">GasUsed</span>     <span class="kt">uint64</span>         <span class="s">`json:&#34;gasUsed&#34;          gencodec:&#34;required&#34;`</span>
+	<span class="nx">Time</span>        <span class="o">*</span><span class="nx">big</span><span class="p">.</span><span class="nx">Int</span>       <span class="s">`json:&#34;timestamp&#34;        gencodec:&#34;required&#34;`</span>
+	<span class="nx">Extra</span>       <span class="p">[]</span><span class="kt">byte</span>         <span class="s">`json:&#34;extraData&#34;        gencodec:&#34;required&#34;`</span>
+	<span class="nx">MixDigest</span>   <span class="nx">common</span><span class="p">.</span><span class="nx">Hash</span>    <span class="s">`json:&#34;mixHash&#34;          gencodec:&#34;required&#34;`</span>
+	<span class="nx">Nonce</span>       <span class="nx">BlockNonce</span>     <span class="s">`json:&#34;nonce&#34;            gencodec:&#34;required&#34;`</span>
+<span class="p">}</span>
 
-<pre><code class="language-go">type Header struct {
-	ParentHash  common.Hash    `json:&quot;parentHash&quot;       gencodec:&quot;required&quot;`
-	UncleHash   common.Hash    `json:&quot;sha3Uncles&quot;       gencodec:&quot;required&quot;`
-	Coinbase    common.Address `json:&quot;miner&quot;            gencodec:&quot;required&quot;`
-	Root        common.Hash    `json:&quot;stateRoot&quot;        gencodec:&quot;required&quot;`
-	TxHash      common.Hash    `json:&quot;transactionsRoot&quot; gencodec:&quot;required&quot;`
-	ReceiptHash common.Hash    `json:&quot;receiptsRoot&quot;     gencodec:&quot;required&quot;`
-	Bloom       Bloom          `json:&quot;logsBloom&quot;        gencodec:&quot;required&quot;`
-	Difficulty  *big.Int       `json:&quot;difficulty&quot;       gencodec:&quot;required&quot;`
-	Number      *big.Int       `json:&quot;number&quot;           gencodec:&quot;required&quot;`
-	GasLimit    uint64         `json:&quot;gasLimit&quot;         gencodec:&quot;required&quot;`
-	GasUsed     uint64         `json:&quot;gasUsed&quot;          gencodec:&quot;required&quot;`
-	Time        *big.Int       `json:&quot;timestamp&quot;        gencodec:&quot;required&quot;`
-	Extra       []byte         `json:&quot;extraData&quot;        gencodec:&quot;required&quot;`
-	MixDigest   common.Hash    `json:&quot;mixHash&quot;          gencodec:&quot;required&quot;`
-	Nonce       BlockNonce     `json:&quot;nonce&quot;            gencodec:&quot;required&quot;`
-}
-
-type Body struct {
-	Transactions []*Transaction
-	Uncles       []*Header
-}
-</code></pre>
-
-<p>除了主链，以太坊还存储账户状态信息、合约状态信息，试想一下假如用户1个亿，合约数量1千万，如果在每个block上记录状态，随着block增多，数据量将会急速膨胀。所以，这部分数据不能直接存储在block中，但是如果不存储在block中，这部分数据又很容易被更改。那怎么办呢？答案是<a href="https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/">Merkle Patricia
+<span class="kd">type</span> <span class="nx">Body</span> <span class="kd">struct</span> <span class="p">{</span>
+	<span class="nx">Transactions</span> <span class="p">[]</span><span class="o">*</span><span class="nx">Transaction</span>
+	<span class="nx">Uncles</span>       <span class="p">[]</span><span class="o">*</span><span class="nx">Header</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>除了主链，以太坊还存储账户状态信息、合约状态信息，试想一下假如用户1个亿，合约数量1千万，如果在每个block上记录状态，随着block增多，数据量将会急速膨胀。所以，这部分数据不能直接存储在block中，但是如果不存储在block中，这部分数据又很容易被更改。那怎么办呢？答案是<a href="https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/">Merkle Patricia
 Tree</a>。Tree的rootHash上链，保证难以篡改。当状态需要更新时，将老状态复制一份，在此基础上更新形成新状态维护在最后一个block上，然后可以删除老状态。这样每个客户端只需要维护最新的block上的用户、合约状态，这样就解决了数据量的问题。对于以太坊，状态可以根据block header中的Root字段进行查询到其对应的Merkle Tree。账号的状态是直接记录的。合约的地址也是一种账号形式，通过合约地址可以找到其codeHash，从而进一步在storage Trie 找到其二进制实现和状态，加载至evm进行运行。</p>
-
 <p>下面这段测试代码，可以帮助你简单理解下数据如何存储</p>
-
-<pre><code class="language-mermaid">graph TD
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">graph TD
 A(Block Number) --&gt;B(Block Hash)
 B --&gt; |+ Block Number|C(Block Header)
 B --&gt; |+ Block Number|D(Block Body)
 C --&gt; |Root + Address|E(Account State Trie)
 E --&gt; |CodeHash|F(Contract State of Account)
 D --&gt; G(Transactions)
-</code></pre>
+</code></pre></td></tr></table>
+</div>
+</div><p><img src="/images/ethereum/account_state_test.svg" alt="代码流程"></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
 
-<p><img src="/images/ethereum/account_state_test.svg" alt="代码流程" /></p>
+<span class="kn">import</span> <span class="p">(</span>
+	<span class="s">&#34;fmt&#34;</span>
+	<span class="s">&#34;github.com/ethereum/go-ethereum/common&#34;</span>
+	<span class="s">&#34;github.com/ethereum/go-ethereum/ethdb&#34;</span>
+	<span class="s">&#34;encoding/binary&#34;</span>
+	<span class="s">&#34;github.com/ethereum/go-ethereum/core/types&#34;</span>
+	<span class="s">&#34;bytes&#34;</span>
+	<span class="s">&#34;github.com/ethereum/go-ethereum/rlp&#34;</span>
+	<span class="s">&#34;github.com/ethereum/go-ethereum/trie&#34;</span>
+	<span class="s">&#34;github.com/ethereum/go-ethereum/core/state&#34;</span>
+	<span class="s">&#34;github.com/ethereum/go-ethereum/crypto&#34;</span>
+<span class="p">)</span>
 
-<pre><code class="language-go">package main
+<span class="kd">var</span> <span class="p">(</span>
+	<span class="nx">headHeaderKey</span> <span class="p">=</span> <span class="p">[]</span><span class="nb">byte</span><span class="p">(</span><span class="s">&#34;LastHeader&#34;</span><span class="p">)</span>
+	<span class="nx">headBlockKey</span>  <span class="p">=</span> <span class="p">[]</span><span class="nb">byte</span><span class="p">(</span><span class="s">&#34;LastBlock&#34;</span><span class="p">)</span>
+	<span class="nx">headFastKey</span>   <span class="p">=</span> <span class="p">[]</span><span class="nb">byte</span><span class="p">(</span><span class="s">&#34;LastFast&#34;</span><span class="p">)</span>
 
-import (
-	&quot;fmt&quot;
-	&quot;github.com/ethereum/go-ethereum/common&quot;
-	&quot;github.com/ethereum/go-ethereum/ethdb&quot;
-	&quot;encoding/binary&quot;
-	&quot;github.com/ethereum/go-ethereum/core/types&quot;
-	&quot;bytes&quot;
-	&quot;github.com/ethereum/go-ethereum/rlp&quot;
-	&quot;github.com/ethereum/go-ethereum/trie&quot;
-	&quot;github.com/ethereum/go-ethereum/core/state&quot;
-	&quot;github.com/ethereum/go-ethereum/crypto&quot;
-)
+	<span class="nx">bodyPrefix</span>          <span class="p">=</span> <span class="p">[]</span><span class="nb">byte</span><span class="p">(</span><span class="s">&#34;b&#34;</span><span class="p">)</span>
+	<span class="nx">blockHashPrefix</span>     <span class="p">=</span> <span class="p">[]</span><span class="nb">byte</span><span class="p">(</span><span class="s">&#34;H&#34;</span><span class="p">)</span>
+	<span class="nx">headerPrefix</span>        <span class="p">=</span> <span class="p">[]</span><span class="nb">byte</span><span class="p">(</span><span class="s">&#34;h&#34;</span><span class="p">)</span> <span class="c1">// headerPrefix + num (uint64 big endian) + hash -&gt; header
+</span><span class="c1"></span>	<span class="nx">numSuffix</span>           <span class="p">=</span> <span class="p">[]</span><span class="nb">byte</span><span class="p">(</span><span class="s">&#34;n&#34;</span><span class="p">)</span> <span class="c1">// headerPrefix + num (uint64 big endian) + numSuffix -&gt; hash
+</span><span class="c1"></span><span class="p">)</span>
 
-var (
-	headHeaderKey = []byte(&quot;LastHeader&quot;)
-	headBlockKey  = []byte(&quot;LastBlock&quot;)
-	headFastKey   = []byte(&quot;LastFast&quot;)
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="nx">db</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">ethdb</span><span class="p">.</span><span class="nf">NewLDBDatabase</span><span class="p">(</span><span class="s">&#34;/Users/bing/test/data/geth/chaindata&#34;</span><span class="p">,</span> <span class="mi">768</span><span class="p">,</span> <span class="mi">1024</span><span class="p">)</span>
+	<span class="k">if</span> <span class="kc">nil</span> <span class="o">!=</span> <span class="nx">err</span> <span class="p">{</span>
+		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+		<span class="k">return</span>
+	<span class="p">}</span>
 
-	bodyPrefix          = []byte(&quot;b&quot;)
-	blockHashPrefix     = []byte(&quot;H&quot;)
-	headerPrefix        = []byte(&quot;h&quot;) // headerPrefix + num (uint64 big endian) + hash -&gt; header
-	numSuffix           = []byte(&quot;n&quot;) // headerPrefix + num (uint64 big endian) + numSuffix -&gt; hash
-)
+	<span class="nx">headBlockHashData</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">db</span><span class="p">.</span><span class="nf">Get</span><span class="p">(</span><span class="nx">headBlockKey</span><span class="p">)</span>
+	<span class="nx">headBlockHash</span> <span class="o">:=</span> <span class="nx">common</span><span class="p">.</span><span class="nf">BytesToHash</span><span class="p">(</span><span class="nx">headBlockHashData</span><span class="p">);</span>
 
-func main() {
-	db, err := ethdb.NewLDBDatabase(&quot;/Users/bing/test/data/geth/chaindata&quot;, 768, 1024)
-	if nil != err {
-		fmt.Println(err)
-		return
-	}
+	<span class="nx">headBlockNumData</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">db</span><span class="p">.</span><span class="nf">Get</span><span class="p">(</span><span class="nb">append</span><span class="p">(</span><span class="nx">blockHashPrefix</span><span class="p">,</span> <span class="nx">headBlockHashData</span><span class="o">...</span><span class="p">))</span>
+	<span class="nx">headBlockNum</span> <span class="o">:=</span> <span class="nx">binary</span><span class="p">.</span><span class="nx">BigEndian</span><span class="p">.</span><span class="nf">Uint64</span><span class="p">(</span><span class="nx">headBlockNumData</span><span class="p">)</span>
 
-	headBlockHashData, _ := db.Get(headBlockKey)
-	headBlockHash := common.BytesToHash(headBlockHashData);
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;block Number of hash %x is %d\n&#34;</span><span class="p">,</span> <span class="nx">headBlockHash</span><span class="p">,</span> <span class="nx">headBlockNum</span><span class="p">)</span>
 
-	headBlockNumData, _ := db.Get(append(blockHashPrefix, headBlockHashData...))
-	headBlockNum := binary.BigEndian.Uint64(headBlockNumData)
+	<span class="c1">// Connection to leveldb
+</span><span class="c1"></span>	<span class="c1">//db, _ := leveldb.OpenFile(&#34;/Users/bing/test/data/geth/chaindata&#34;, nil)
+</span><span class="c1"></span>
+	<span class="c1">//374,327,307,294,287
+</span><span class="c1"></span>	<span class="c1">//18, contract creation
+</span><span class="c1"></span>	<span class="k">for</span> <span class="nx">i</span><span class="o">:=</span><span class="nx">headBlockNum</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&gt;</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">--</span> <span class="p">{</span>
+		<span class="c1">// 40 to bytes (Big endian)
+</span><span class="c1"></span>		<span class="nx">blockNumber</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="kt">byte</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+		<span class="nx">binary</span><span class="p">.</span><span class="nx">BigEndian</span><span class="p">.</span><span class="nf">PutUint64</span><span class="p">(</span><span class="nx">blockNumber</span><span class="p">,</span> <span class="nb">uint64</span><span class="p">(</span><span class="nx">i</span><span class="p">))</span>
 
-	fmt.Printf(&quot;block Number of hash %x is %d\n&quot;, headBlockHash, headBlockNum)
+		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;Details of Blocknumber:- \nHex: %x \nBytes: %d\n\n\n&#34;</span><span class="p">,</span> <span class="nx">blockNumber</span><span class="p">,</span> <span class="nx">blockNumber</span><span class="p">)</span>
 
-	// Connection to leveldb
-	//db, _ := leveldb.OpenFile(&quot;/Users/bing/test/data/geth/chaindata&quot;, nil)
+		<span class="c1">// create key to get hash (headerPrefix + num (uint64 big endian) + numSuffix)
+</span><span class="c1"></span>		<span class="nx">hashKey</span> <span class="o">:=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">headerPrefix</span><span class="p">,</span> <span class="nx">blockNumber</span><span class="o">...</span><span class="p">)</span> <span class="c1">// adding prefix
+</span><span class="c1"></span>		<span class="nx">hashKey</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">hashKey</span><span class="p">,</span> <span class="nx">numSuffix</span><span class="o">...</span><span class="p">)</span>         <span class="c1">// adding suffix
+</span><span class="c1"></span>
+		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;Details of leveldb key for Block Hash:- \nType: %T  \nHex: %x \nbytes: %v \nLength:  %d\n\n\n&#34;</span><span class="p">,</span> <span class="nx">hashKey</span><span class="p">,</span> <span class="nx">hashKey</span><span class="p">,</span> <span class="nx">hashKey</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nx">hashKey</span><span class="p">))</span>
 
-	//374,327,307,294,287
-	//18, contract creation
-	for i:=headBlockNum; i &gt; 0; i-- {
-		// 40 to bytes (Big endian)
-		blockNumber := make([]byte, 8)
-		binary.BigEndian.PutUint64(blockNumber, uint64(i))
+		<span class="c1">// Getting hash using hashKey
+</span><span class="c1"></span>		<span class="nx">blockHash</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">db</span><span class="p">.</span><span class="nf">Get</span><span class="p">(</span><span class="nx">hashKey</span><span class="p">)</span>
+		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;Details of Block hash:- \nType: %T \nHex: %x \nBytes: %v\n\n\n&#34;</span><span class="p">,</span> <span class="nx">blockHash</span><span class="p">,</span> <span class="nx">blockHash</span><span class="p">,</span> <span class="nx">blockHash</span><span class="p">)</span>
 
-		fmt.Printf(&quot;Details of Blocknumber:- \nHex: %x \nBytes: %d\n\n\n&quot;, blockNumber, blockNumber)
+		<span class="c1">//Create key to get header (headerPrefix + num (uint64 big endian) + hash)
+</span><span class="c1"></span>		<span class="nx">headerKey</span> <span class="o">:=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">headerPrefix</span><span class="p">,</span> <span class="nx">blockNumber</span><span class="o">...</span><span class="p">)</span> <span class="c1">// adding prefix
+</span><span class="c1"></span>		<span class="nx">headerKey</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">headerKey</span><span class="p">,</span> <span class="nx">blockHash</span><span class="o">...</span><span class="p">)</span>       <span class="c1">// adding suffix
+</span><span class="c1"></span>
+		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;Details of leveldb key for Block Header:- \nType: %T  \nHex: %x \nVytes: %v \nLength:  %d\n\n\n&#34;</span><span class="p">,</span> <span class="nx">headerKey</span><span class="p">,</span> <span class="nx">headerKey</span><span class="p">,</span> <span class="nx">headerKey</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nx">headerKey</span><span class="p">))</span>
 
-		// create key to get hash (headerPrefix + num (uint64 big endian) + numSuffix)
-		hashKey := append(headerPrefix, blockNumber...) // adding prefix
-		hashKey = append(hashKey, numSuffix...)         // adding suffix
+		<span class="c1">//get Block Header data from db
+</span><span class="c1"></span>		<span class="nx">blockHeaderData</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">db</span><span class="p">.</span><span class="nf">Get</span><span class="p">(</span><span class="nx">headerKey</span><span class="p">)</span>
 
-		fmt.Printf(&quot;Details of leveldb key for Block Hash:- \nType: %T  \nHex: %x \nbytes: %v \nLength:  %d\n\n\n&quot;, hashKey, hashKey, hashKey, len(hashKey))
+		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;Details of Raw Block Header:- \nType: %T  \nHex: %x \nBytes: %v \nLength:  %d\n\n\n&#34;</span><span class="p">,</span> <span class="nx">blockHeaderData</span><span class="p">,</span> <span class="nx">blockHeaderData</span><span class="p">,</span> <span class="nx">blockHeaderData</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nx">blockHeaderData</span><span class="p">))</span>
 
-		// Getting hash using hashKey
-		blockHash, _ := db.Get(hashKey)
-		fmt.Printf(&quot;Details of Block hash:- \nType: %T \nHex: %x \nBytes: %v\n\n\n&quot;, blockHash, blockHash, blockHash)
+		<span class="c1">//new Blockheader type
+</span><span class="c1"></span>		<span class="nx">blockHeader</span> <span class="o">:=</span> <span class="nb">new</span><span class="p">(</span><span class="nx">types</span><span class="p">.</span><span class="nx">Header</span><span class="p">)</span>
+		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;Details of new Header Type:- \nType: %T  \nHex: %x \nValue: %v\n\n\n&#34;</span><span class="p">,</span> <span class="nx">blockHeader</span><span class="p">,</span> <span class="nx">blockHeader</span><span class="p">,</span> <span class="nx">blockHeader</span><span class="p">)</span>
 
-		//Create key to get header (headerPrefix + num (uint64 big endian) + hash)
-		headerKey := append(headerPrefix, blockNumber...) // adding prefix
-		headerKey = append(headerKey, blockHash...)       // adding suffix
+		<span class="c1">// Read blockHeaderData in a tmp variable
+</span><span class="c1"></span>		<span class="nx">tmpByteData</span> <span class="o">:=</span> <span class="nx">bytes</span><span class="p">.</span><span class="nf">NewReader</span><span class="p">(</span><span class="nx">blockHeaderData</span><span class="p">)</span>
+		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;Details of tmpByteData:- \nType: %T  \nHex: %x \nValue: %v\n\n\n&#34;</span><span class="p">,</span> <span class="nx">tmpByteData</span><span class="p">,</span> <span class="nx">tmpByteData</span><span class="p">,</span> <span class="nx">tmpByteData</span><span class="p">)</span>
 
-		fmt.Printf(&quot;Details of leveldb key for Block Header:- \nType: %T  \nHex: %x \nVytes: %v \nLength:  %d\n\n\n&quot;, headerKey, headerKey, headerKey, len(headerKey))
+		<span class="c1">//Decode tmpByteData to new blockHeader
+</span><span class="c1"></span>		<span class="nx">rlp</span><span class="p">.</span><span class="nf">Decode</span><span class="p">(</span><span class="nx">tmpByteData</span><span class="p">,</span> <span class="nx">blockHeader</span><span class="p">)</span>
+		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;Details of Header for block number:- \nType: %T  \nHex: %x \nValue: %v\n\n\n&#34;</span><span class="p">,</span> <span class="nx">blockHeader</span><span class="p">,</span> <span class="nx">blockHeader</span><span class="p">,</span> <span class="nx">blockHeader</span><span class="p">)</span>
 
-		//get Block Header data from db
-		blockHeaderData, _ := db.Get(headerKey)
-
-		fmt.Printf(&quot;Details of Raw Block Header:- \nType: %T  \nHex: %x \nBytes: %v \nLength:  %d\n\n\n&quot;, blockHeaderData, blockHeaderData, blockHeaderData, len(blockHeaderData))
-
-		//new Blockheader type
-		blockHeader := new(types.Header)
-		fmt.Printf(&quot;Details of new Header Type:- \nType: %T  \nHex: %x \nValue: %v\n\n\n&quot;, blockHeader, blockHeader, blockHeader)
-
-		// Read blockHeaderData in a tmp variable
-		tmpByteData := bytes.NewReader(blockHeaderData)
-		fmt.Printf(&quot;Details of tmpByteData:- \nType: %T  \nHex: %x \nValue: %v\n\n\n&quot;, tmpByteData, tmpByteData, tmpByteData)
-
-		//Decode tmpByteData to new blockHeader
-		rlp.Decode(tmpByteData, blockHeader)
-		fmt.Printf(&quot;Details of Header for block number:- \nType: %T  \nHex: %x \nValue: %v\n\n\n&quot;, blockHeader, blockHeader, blockHeader)
-
-		blockBodyData, _ := db.Get(append(append(bodyPrefix, blockNumber...), blockHash...))
-		blockBody := new(types.Body)
-		if err = rlp.Decode(bytes.NewReader(blockBodyData), blockBody); err != nil {
-			fmt.Println(err)
-		}
-		fmt.Printf(&quot;Details of Body for block number:- \nType: %T  \nHex: %x \nValue: %v\n\n\n&quot;, blockBody, blockBody, blockBody)
-		if len(blockBody.Transactions) != 0 {
-			fmt.Printf(&quot;Block with noempty body found: %d\n&quot;, i)
-			break;
-		}
-	}
+		<span class="nx">blockBodyData</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">db</span><span class="p">.</span><span class="nf">Get</span><span class="p">(</span><span class="nb">append</span><span class="p">(</span><span class="nb">append</span><span class="p">(</span><span class="nx">bodyPrefix</span><span class="p">,</span> <span class="nx">blockNumber</span><span class="o">...</span><span class="p">),</span> <span class="nx">blockHash</span><span class="o">...</span><span class="p">))</span>
+		<span class="nx">blockBody</span> <span class="o">:=</span> <span class="nb">new</span><span class="p">(</span><span class="nx">types</span><span class="p">.</span><span class="nx">Body</span><span class="p">)</span>
+		<span class="k">if</span> <span class="nx">err</span> <span class="p">=</span> <span class="nx">rlp</span><span class="p">.</span><span class="nf">Decode</span><span class="p">(</span><span class="nx">bytes</span><span class="p">.</span><span class="nf">NewReader</span><span class="p">(</span><span class="nx">blockBodyData</span><span class="p">),</span> <span class="nx">blockBody</span><span class="p">);</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+			<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+		<span class="p">}</span>
+		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;Details of Body for block number:- \nType: %T  \nHex: %x \nValue: %v\n\n\n&#34;</span><span class="p">,</span> <span class="nx">blockBody</span><span class="p">,</span> <span class="nx">blockBody</span><span class="p">,</span> <span class="nx">blockBody</span><span class="p">)</span>
+		<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nx">blockBody</span><span class="p">.</span><span class="nx">Transactions</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">{</span>
+			<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;Block with noempty body found: %d\n&#34;</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span>
+			<span class="k">break</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
 
 
-	headBlockHeaderData, _ := db.Get(append(append(headerPrefix, headBlockNumData...), headBlockHashData...))
-	headBlockHeader := new(types.Header)
-	rlp.Decode(bytes.NewReader(headBlockHeaderData), headBlockHeader);
-	fmt.Printf(&quot;head block Header: %v\n&quot;, headBlockHeader)
-	headBlockBodyData, _ := db.Get(append(append(bodyPrefix, headBlockNumData...), headBlockHashData...))
-	//headBlockBodyData, _ := db.Get(append(append(bodyPrefix, blockNumber...), blockHash...))
-	headBlockBody := new(types.Body)
-	err = rlp.Decode(bytes.NewReader(headBlockBodyData), headBlockBody)
-	if err != nil {
-		fmt.Println(err)
-	}
-	fmt.Printf(&quot;head block Body: %v\n&quot;, headBlockBody)
+	<span class="nx">headBlockHeaderData</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">db</span><span class="p">.</span><span class="nf">Get</span><span class="p">(</span><span class="nb">append</span><span class="p">(</span><span class="nb">append</span><span class="p">(</span><span class="nx">headerPrefix</span><span class="p">,</span> <span class="nx">headBlockNumData</span><span class="o">...</span><span class="p">),</span> <span class="nx">headBlockHashData</span><span class="o">...</span><span class="p">))</span>
+	<span class="nx">headBlockHeader</span> <span class="o">:=</span> <span class="nb">new</span><span class="p">(</span><span class="nx">types</span><span class="p">.</span><span class="nx">Header</span><span class="p">)</span>
+	<span class="nx">rlp</span><span class="p">.</span><span class="nf">Decode</span><span class="p">(</span><span class="nx">bytes</span><span class="p">.</span><span class="nf">NewReader</span><span class="p">(</span><span class="nx">headBlockHeaderData</span><span class="p">),</span> <span class="nx">headBlockHeader</span><span class="p">);</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;head block Header: %v\n&#34;</span><span class="p">,</span> <span class="nx">headBlockHeader</span><span class="p">)</span>
+	<span class="nx">headBlockBodyData</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">db</span><span class="p">.</span><span class="nf">Get</span><span class="p">(</span><span class="nb">append</span><span class="p">(</span><span class="nb">append</span><span class="p">(</span><span class="nx">bodyPrefix</span><span class="p">,</span> <span class="nx">headBlockNumData</span><span class="o">...</span><span class="p">),</span> <span class="nx">headBlockHashData</span><span class="o">...</span><span class="p">))</span>
+	<span class="c1">//headBlockBodyData, _ := db.Get(append(append(bodyPrefix, blockNumber...), blockHash...))
+</span><span class="c1"></span>	<span class="nx">headBlockBody</span> <span class="o">:=</span> <span class="nb">new</span><span class="p">(</span><span class="nx">types</span><span class="p">.</span><span class="nx">Body</span><span class="p">)</span>
+	<span class="nx">err</span> <span class="p">=</span> <span class="nx">rlp</span><span class="p">.</span><span class="nf">Decode</span><span class="p">(</span><span class="nx">bytes</span><span class="p">.</span><span class="nf">NewReader</span><span class="p">(</span><span class="nx">headBlockBodyData</span><span class="p">),</span> <span class="nx">headBlockBody</span><span class="p">)</span>
+	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+	<span class="p">}</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;head block Body: %v\n&#34;</span><span class="p">,</span> <span class="nx">headBlockBody</span><span class="p">)</span>
 
-	//trie, err := trie.New(common.StringToHash(&quot;0x5891bbf641aaf627dcce8164be0ff9670efeb7bdde188d29134b3a1963ab738a&quot;), trie.NewDatabase(ldb))
-	trieSecure, err := trie.NewSecure(headBlockHeader.Root, trie.NewDatabase(db), 120)
-	//trieSecure, err := state.NewDatabase(db).OpenTrie(common.HexToHash(&quot;0x5a3aa9413dae5b3b87008d8a1e5817a736417d1f70e7351c7a803508134a670c&quot;))
-	if nil != err {
-		fmt.Println(err)
-		return
-	}
-	addr := common.HexToAddress(&quot;0x328c2504e15b05572df94f0df385cf3c4b130879&quot;)
-	val, err := trieSecure.TryGet(addr[:])
-	if nil != err {
-		fmt.Println(err)
-		return
-	}
-	//fmt.Printf(&quot;%v\n&quot;, val)
-
-	var data state.Account
-	if err := rlp.DecodeBytes(val, &amp;data); err != nil {
-		fmt.Print(&quot;Failed to decode state object&quot;, &quot;, addr: &quot;, addr, &quot;, err: &quot;, err)
-		return
-	}
-	fmt.Printf(&quot;account state: %+v\n&quot;, data)
-	//fmt.Printf(&quot;%x\n&quot;, blockHeader.Root)
-	fmt.Printf(&quot;%x\t%x\n&quot;, data.Root, common.BytesToHash(data.CodeHash))
-	fmt.Printf(&quot;%x\n&quot;, crypto.Keccak256(nil))
-}
-</code></pre>
-
-<h3 id="merkle-patricia-tree">Merkle Patricia Tree</h3>
-
+	<span class="c1">//trie, err := trie.New(common.StringToHash(&#34;0x5891bbf641aaf627dcce8164be0ff9670efeb7bdde188d29134b3a1963ab738a&#34;), trie.NewDatabase(ldb))
+</span><span class="c1"></span>	<span class="nx">trieSecure</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">trie</span><span class="p">.</span><span class="nf">NewSecure</span><span class="p">(</span><span class="nx">headBlockHeader</span><span class="p">.</span><span class="nx">Root</span><span class="p">,</span> <span class="nx">trie</span><span class="p">.</span><span class="nf">NewDatabase</span><span class="p">(</span><span class="nx">db</span><span class="p">),</span> <span class="mi">120</span><span class="p">)</span>
+	<span class="c1">//trieSecure, err := state.NewDatabase(db).OpenTrie(common.HexToHash(&#34;0x5a3aa9413dae5b3b87008d8a1e5817a736417d1f70e7351c7a803508134a670c&#34;))
+</span><span class="c1"></span>	<span class="k">if</span> <span class="kc">nil</span> <span class="o">!=</span> <span class="nx">err</span> <span class="p">{</span>
+		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+		<span class="k">return</span>
+	<span class="p">}</span>
+	<span class="nx">addr</span> <span class="o">:=</span> <span class="nx">common</span><span class="p">.</span><span class="nf">HexToAddress</span><span class="p">(</span><span class="s">&#34;0x328c2504e15b05572df94f0df385cf3c4b130879&#34;</span><span class="p">)</span>
+	<span class="nx">val</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">trieSecure</span><span class="p">.</span><span class="nf">TryGet</span><span class="p">(</span><span class="nx">addr</span><span class="p">[:])</span>
+	<span class="k">if</span> <span class="kc">nil</span> <span class="o">!=</span> <span class="nx">err</span> <span class="p">{</span>
+		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+		<span class="k">return</span>
+	<span class="p">}</span>
+	<span class="c1">//fmt.Printf(&#34;%v\n&#34;, val)
+</span><span class="c1"></span>
+	<span class="kd">var</span> <span class="nx">data</span> <span class="nx">state</span><span class="p">.</span><span class="nx">Account</span>
+	<span class="k">if</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">rlp</span><span class="p">.</span><span class="nf">DecodeBytes</span><span class="p">(</span><span class="nx">val</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">data</span><span class="p">);</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="s">&#34;Failed to decode state object&#34;</span><span class="p">,</span> <span class="s">&#34;, addr: &#34;</span><span class="p">,</span> <span class="nx">addr</span><span class="p">,</span> <span class="s">&#34;, err: &#34;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
+		<span class="k">return</span>
+	<span class="p">}</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;account state: %+v\n&#34;</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+	<span class="c1">//fmt.Printf(&#34;%x\n&#34;, blockHeader.Root)
+</span><span class="c1"></span>	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;%x\t%x\n&#34;</span><span class="p">,</span> <span class="nx">data</span><span class="p">.</span><span class="nx">Root</span><span class="p">,</span> <span class="nx">common</span><span class="p">.</span><span class="nf">BytesToHash</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">CodeHash</span><span class="p">))</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;%x\n&#34;</span><span class="p">,</span> <span class="nx">crypto</span><span class="p">.</span><span class="nf">Keccak256</span><span class="p">(</span><span class="kc">nil</span><span class="p">))</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="merkle-patricia-tree">Merkle Patricia Tree</h3>
 <ul>
 <li>同样出自Lee Thomas
-<img src="/images/ethereum/ethereum_trie.png" alt="tire" /></li>
+<img src="/images/ethereum/ethereum_trie.png" alt="tire"></li>
 <li>可以参考<a href="https://easythereentropy.wordpress.com/2014/06/04/understanding-the-ethereum-trie/">Understanding the ethereum trie
 </a>和<a href="https://github.com/ebuchman/understanding_ethereum_trie">demo</a></li>
 </ul>
-
-<hr />
-
+<hr>
 <blockquote>
 <p>持续学习中，理解可能有误，敬请谅解</p>
-
+</blockquote>
+<blockquote>
 <p>版权所有，转载请注明来源</p>
 </blockquote>
 
     </div>
 
     
-    
-
-    
-    
-
-    <footer class="post-footer">
+<footer class="post-footer">
       <div class="post-tags">
-          
           <a href="/tags/%E4%BB%A5%E5%A4%AA%E5%9D%8A/">以太坊</a>
-          
-        </div>
-
-      
+          </div>
       <nav class="post-nav">
-        
-          <a class="prev" href="/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8Akeystore%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/">
+        <a class="prev" href="/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8Akeystore%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/">
             <i class="iconfont icon-left"></i>
             <span class="prev-text nav-default">以太坊Keystore基本原理</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
-        
-          <a class="next" href="/post/ethereum/%E4%BB%8E%E8%B4%A6%E5%8F%B7%E5%91%BD%E4%BB%A4%E5%BC%80%E5%A7%8B%E7%9A%84%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/">
+        <a class="next" href="/post/ethereum/%E4%BB%8E%E8%B4%A6%E5%8F%B7%E5%91%BD%E4%BB%A4%E5%BC%80%E5%A7%8B%E7%9A%84%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/">
             <span class="next-text nav-default">从账号命令开始的源码分析</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
@@ -466,19 +587,17 @@ func main() {
 
   <div class="busuanzi-footer">
     <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
-    <span class="division">|</span>
+      <span class="division">|</span>
     <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
   </div>
 
   <span class="copyright-year">
     &copy; 
-    2018
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">Bing</span>
+    2018 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>Bing</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -486,23 +605,15 @@ func main() {
     </div>
   </div>
   
-<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   
 
 
-<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
 
-<script id="baidu_analytics">
-  var _hmt = _hmt || [];
-  (function() {
-    if (window.location.hostname === 'localhost') return;
-    var hm = document.createElement("script"); hm.async = true;
-    hm.src = "https://hm.baidu.com/hm.js?3732599b0b9fcaff18c0c25a12a40ad6";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(hm, s);
-  })();
-</script>
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
 
 
 

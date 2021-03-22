@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Bing - Never stop</title>
@@ -6,11 +6,7 @@
     <description>Recent content in Posts on Bing - Never stop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Jul 2018 17:53:18 +0800</lastBuildDate>
-    
-	<atom:link href="https://bing-chou.github.io/post/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 23 Jul 2018 17:53:18 +0800</lastBuildDate><atom:link href="https://bing-chou.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>以太坊Keystore基本原理</title>
       <link>https://bing-chou.github.io/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8Akeystore%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</link>
@@ -35,7 +31,7 @@
       <pubDate>Thu, 21 Jun 2018 20:31:27 +0800</pubDate>
       
       <guid>https://bing-chou.github.io/post/ethereum/%E4%BB%8E%E8%B4%A6%E5%8F%B7%E5%91%BD%E4%BB%A4%E5%BC%80%E5%A7%8B%E7%9A%84%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/</guid>
-      <description>引言 在以太坊私有链搭建及基本操作中，使用了下面的命令来新建账号。接下来我就来看下以太坊账号的原理 ./geth --datadir data account new 另外，我们还关心一个命令 list ./geth --datadir data account</description>
+      <description>引言 在以太坊私有链搭建及基本操作中，使用了下面的命令来新建账号。接下来我就来看下以太坊账号的原理 1 ./geth --datadir data account new 另外，我们还关心一个命令 list 1 ./geth --datadir</description>
     </item>
     
     <item>
@@ -62,7 +58,7 @@
       <pubDate>Wed, 20 Jun 2018 18:34:35 +0800</pubDate>
       
       <guid>https://bing-chou.github.io/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</guid>
-      <description>安装工具 go，支持go语言编译。MAC下推荐使用使用brew安装go Linux，Win环境安装方法参考 安装 Go brew install go delve，支持go语言调</description>
+      <description>安装工具 go，支持go语言编译。MAC下推荐使用使用brew安装go Linux，Win环境安装方法参考 安装 Go 1 brew install go delve，支持go语言</description>
     </item>
     
   </channel>
