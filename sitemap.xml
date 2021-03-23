@@ -3,21 +3,35 @@
   
   <url>
     <loc>https://bing-chou.github.io/</loc>
-    <lastmod>2018-07-23T17:53:18+08:00</lastmod>
+    <lastmod>2021-03-23T10:10:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bing-chou.github.io/tags/bittorrent/</loc>
+    <lastmod>2021-03-23T10:10:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bing-chou.github.io/post/</loc>
-    <lastmod>2018-07-23T17:53:18+08:00</lastmod>
+    <lastmod>2021-03-23T10:10:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bing-chou.github.io/tags/</loc>
-    <lastmod>2018-07-23T17:53:18+08:00</lastmod>
+    <lastmod>2021-03-23T10:10:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bing-chou.github.io/post/bittorrent/%E8%AE%A4%E8%AF%86trackerocelot%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/</loc>
+    <lastmod>2021-03-23T10:10:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

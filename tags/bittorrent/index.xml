@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BitTorrent on Bing - Never stop</title>
+    <link>https://bing-chou.github.io/tags/bittorrent/</link>
+    <description>Recent content in BitTorrent on Bing - Never stop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 23 Mar 2021 10:10:00 +0800</lastBuildDate><atom:link href="https://bing-chou.github.io/tags/bittorrent/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>认识BT Tracker，Ocelot源码解析</title>
+      <link>https://bing-chou.github.io/post/bittorrent/%E8%AE%A4%E8%AF%86trackerocelot%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/</link>
+      <pubDate>Tue, 23 Mar 2021 10:10:00 +0800</pubDate>
+      
+      <guid>https://bing-chou.github.io/post/bittorrent/%E8%AE%A4%E8%AF%86trackerocelot%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/</guid>
+      <description>引言 BitTorrent(BT)是一种基于P2P的通信协议，提供了一种非中心化的数据、文件共享方式。那P2P节点相互如何发现呢？最简单的做法</description>
+    </item>
+    
+  </channel>
+</rss>

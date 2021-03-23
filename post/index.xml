@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Bing - Never stop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Jul 2018 17:53:18 +0800</lastBuildDate><atom:link href="https://bing-chou.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Mar 2021 10:10:00 +0800</lastBuildDate><atom:link href="https://bing-chou.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>认识BT Tracker，Ocelot源码解析</title>
+      <link>https://bing-chou.github.io/post/bittorrent/%E8%AE%A4%E8%AF%86trackerocelot%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/</link>
+      <pubDate>Tue, 23 Mar 2021 10:10:00 +0800</pubDate>
+      
+      <guid>https://bing-chou.github.io/post/bittorrent/%E8%AE%A4%E8%AF%86trackerocelot%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/</guid>
+      <description>引言 BitTorrent(BT)是一种基于P2P的通信协议，提供了一种非中心化的数据、文件共享方式。那P2P节点相互如何发现呢？最简单的做法</description>
+    </item>
+    
     <item>
       <title>以太坊Keystore基本原理</title>
       <link>https://bing-chou.github.io/post/ethereum/%E4%BB%A5%E5%A4%AA%E5%9D%8Akeystore%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</link>
